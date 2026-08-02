@@ -1,0 +1,492 @@
+.followup-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.followup-stat-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.followup-stat-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 15px;
+
+    background: #eff6ff;
+
+    font-size: 25px;
+
+}
+
+
+.followup-stat-card p {
+
+    margin: 0 0 6px;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+}
+
+
+.followup-stat-card h2 {
+
+    margin: 0;
+
+    font-size: 30px;
+
+}
+
+
+.overdue-card {
+
+    border-left:
+        4px solid #dc2626;
+
+}
+
+
+.today-card {
+
+    border-left:
+        4px solid #d97706;
+
+}
+
+
+.upcoming-card {
+
+    border-left:
+        4px solid #2563eb;
+
+}
+
+
+.followups-section {
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.followup-controls {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+.followup-controls input,
+.followup-controls select {
+
+    padding: 12px 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    font: inherit;
+
+    outline: none;
+
+}
+
+
+.followup-controls input:focus,
+.followup-controls select:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.12);
+
+}
+
+
+.followup-time {
+
+    display: inline-block;
+
+    padding: 7px 11px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.followup-overdue {
+
+    color: #b91c1c;
+
+    background: #fee2e2;
+
+}
+
+
+.followup-today {
+
+    color: #a16207;
+
+    background: #fef3c7;
+
+}
+
+
+.followup-upcoming {
+
+    color: #1d4ed8;
+
+    background: #dbeafe;
+
+}
+
+
+.followup-date {
+
+    min-width: 175px;
+
+}
+
+
+.followup-date strong {
+
+    display: block;
+
+}
+
+
+.followup-date small {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--gray);
+
+}
+.followup-action-message {
+    min-height: 24px;
+    margin: -8px 0 18px;
+
+    color: #047857;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.followup-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    min-width: 260px;
+}
+
+
+.followup-action-btn {
+    padding: 7px 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+
+.followup-action-btn:hover {
+    transform: translateY(-1px);
+}
+
+
+.followup-view-btn {
+    color: #1d4ed8;
+    background: #dbeafe;
+}
+
+
+.followup-contact-btn {
+    color: #a16207;
+    background: #fef3c7;
+}
+
+
+.followup-reschedule-btn {
+    color: #6d28d9;
+    background: #ede9fe;
+}
+
+
+.followup-complete-btn {
+    color: #047857;
+    background: #d1fae5;
+}
+
+
+/* Reschedule Modal */
+
+.reschedule-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 4000;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.reschedule-modal.active {
+    display: flex;
+}
+
+
+.reschedule-backdrop {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.72);
+
+    backdrop-filter: blur(5px);
+}
+
+
+.reschedule-panel {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 520px;
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 30px 80px rgba(15, 23, 42, 0.3);
+}
+
+
+.reschedule-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.reschedule-header h2 {
+    margin: 0;
+}
+
+
+.reschedule-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding: 24px 0;
+}
+
+
+.reschedule-content label {
+    color: var(--text);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.reschedule-content input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    font: inherit;
+    outline: none;
+}
+
+
+.reschedule-content input:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+.reschedule-message {
+    min-height: 20px;
+    margin: 0;
+
+    color: #dc2626;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.reschedule-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.cancel-reschedule-btn {
+    padding: 11px 18px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    color: var(--text);
+    background: #ffffff;
+
+    cursor: pointer;
+
+    font: inherit;
+    font-weight: 600;
+}
+
+
+@media (max-width: 1150px) {
+
+    .followup-stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .followup-controls {
+
+        width: 100%;
+
+        flex-wrap: wrap;
+
+    }
+
+}
+
+
+@media (max-width: 760px) {
+    .followup-actions {
+    min-width: 220px;
+}
+
+
+.reschedule-panel {
+    padding: 22px 18px;
+}
+
+
+.reschedule-actions {
+    flex-direction: column;
+}
+
+
+.cancel-reschedule-btn,
+.save-status-btn {
+    width: 100%;
+}
+
+    .followup-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .followup-controls {
+
+        flex-direction: column;
+
+    }
+
+
+    .followup-controls input,
+    .followup-controls select {
+
+        width: 100%;
+
+    }
+
+}

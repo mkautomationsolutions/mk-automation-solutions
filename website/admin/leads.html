@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" class="crm-settings-loading crm-access-loading crm-data-loading">
+
+<head>
+    <meta name="robots" content="noindex,nofollow,noarchive">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        MK Automation Solutions | Leads
+    </title>
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="leads.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <div class="brand-icon">
+                    MK
+                </div>
+
+                <div>
+
+                    <h2 data-business-name>
+                        MK Automation Solutions
+                    </h2>
+
+                    <p>
+                        Admin CRM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a
+                    href="index.html"
+                    class="menu-item"
+                >
+                    <span>📊</span>
+                    Dashboard
+                </a>
+
+
+                <a
+                    href="leads.html"
+                    class="menu-item active"
+                >
+                    <span>👥</span>
+                    Leads
+                </a>
+
+
+                <a
+                    href="followups.html"
+                    class="menu-item"
+                >
+                    <span>📅</span>
+                    Follow-ups
+                </a>
+
+
+                <a
+                    href="analytics.html"
+                    class="menu-item"
+                >
+                    <span>📈</span>
+                    Analytics
+                </a>
+
+                <a
+                    href="team.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🧑‍💼</span>
+                    Team
+                </a>
+
+
+
+                <a
+
+                    href="source-rules.html"
+
+                    class="menu-item"
+
+                    data-manage-only
+
+                    hidden
+
+                >
+
+                    <span>🔌</span>
+
+                    Sources
+
+                </a>
+
+                <a
+                    href="reports.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>📄</span>
+                    Reports
+                </a>
+
+
+                <a
+                    href="system-check.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🛡️</span>
+                    System Check
+                </a>
+
+                <a
+                    href="settings.html"
+                    class="menu-item"
+                 data-manage-only hidden>
+                    <span>⚙️</span>
+                    Settings
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-footer">
+
+                <a href="../index.html">
+                    ← Visit Website
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <p class="page-label">
+                        LEAD MANAGEMENT
+                    </p>
+
+                    <h1>
+                        All Customer Leads
+                    </h1>
+
+                </div>
+
+
+                <div class="admin-profile">
+
+                    <button
+                        type="button"
+                        id="logout-btn"
+                        class="logout-btn"
+                    >
+                        Logout
+                    </button>
+
+
+                    <div
+                        class="profile-avatar"
+                        data-admin-initials
+                    data-current-user-initials
+                    >
+                        MM
+                    </div>
+
+
+                    <div>
+
+                        <strong data-admin-name data-current-user-name>
+                            Mohan
+                        </strong>
+
+                        <p data-current-user-role>
+                            Administrator
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- LEADS SECTION -->
+
+            <section class="all-leads-section">
+
+                <div class="leads-section-header">
+
+                    <div>
+
+                        <h2>
+                            Leads Database
+                        </h2>
+
+                        <p>
+                            Search, filter and manage all customer enquiries.
+                        </p>
+
+                    </div>
+
+<div class="leads-header-actions">
+    <a
+    href="archived-leads.html"
+    class="archived-leads-btn"
+>
+    Archived Leads
+</a>
+
+    <a
+        href="add-lead.html"
+        class="add-new-lead-btn"
+    >
+        + Add New Lead
+    </a>
+
+    <a
+        href="import-leads.html"
+        class="import-leads-btn"
+        data-manage-only
+        hidden
+    >
+        Import Leads
+    </a>
+
+    <button
+        type="button"
+        id="export-leads-btn"
+        class="export-leads-btn"
+    >
+        Download CSV
+    </button>
+
+</div>
+
+                </div>
+
+
+                <!-- FILTERS -->
+
+                <div class="leads-filters">
+
+                    <div class="filter-group search-filter">
+
+                        <label for="leads-search">
+                            Search
+                        </label>
+
+                        <input
+                            type="search"
+                            id="leads-search"
+                            placeholder="Name, email, phone or company..."
+                        >
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label for="leads-status-filter">
+                            Status
+                        </label>
+
+                        <select id="leads-status-filter">
+
+                            <option value="all">
+                                All Status
+                            </option>
+
+                            <option value="new">
+                                New
+                            </option>
+
+                            <option value="contacted">
+                                Contacted
+                            </option>
+
+                            <option value="converted">
+                                Converted
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label for="leads-service-filter">
+                            Service
+                        </label>
+
+                        <select id="leads-service-filter">
+
+                            <option value="all">
+                                All Services
+                            </option>
+
+                        </select>
+
+                    </div>
+                    <div class="filter-group">
+
+    <label for="leads-source-filter">
+        Lead Source
+    </label>
+
+    <select id="leads-source-filter">
+        <option value="all">All Sources</option>
+        <option value="website">Website</option>
+        <option value="facebook">Facebook</option>
+        <option value="instagram">Instagram</option>
+        <option value="whatsapp">WhatsApp</option>
+        <option value="linkedin">LinkedIn</option>
+        <option value="google-ads">Google Ads</option>
+        <option value="referral">Referral</option>
+        <option value="existing-customer">Existing Customer</option>
+        <option value="upwork">Upwork / Freelance Platform</option>
+        <option value="direct-outreach">Direct Outreach</option>
+        <option value="employee">Employee</option>
+        <option value="phone-call">Phone Call</option>
+        <option value="api">External API</option>
+        <option value="other">Other</option>
+    </select>
+
+</div>
+<div class="filter-group">
+
+    <label for="leads-priority-filter">
+        Priority
+    </label>
+
+    <select id="leads-priority-filter">
+
+        <option value="all">
+            All Priority
+        </option>
+
+        <option value="high">
+            High
+        </option>
+
+        <option value="medium">
+            Medium
+        </option>
+
+        <option value="low">
+            Low
+        </option>
+
+    </select>
+
+</div>
+
+
+                    <div class="filter-group">
+
+                        <label for="leads-assignee-filter">
+                            Assigned To
+                        </label>
+
+                        <select id="leads-assignee-filter">
+
+                            <option value="all">
+                                All Assignees
+                            </option>
+
+                            <option value="unassigned">
+                                Unassigned
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label for="leads-from-date">
+                            From Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="leads-from-date"
+                        >
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label for="leads-to-date">
+                            To Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="leads-to-date"
+                        >
+
+                    </div>
+
+
+                    <div class="filter-group reset-filter-group">
+
+                        <button
+                            type="button"
+                            id="reset-leads-filters"
+                            class="reset-leads-filters"
+                        >
+                            Reset Filters
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BULK ASSIGNMENT -->
+
+                <section
+                    id="bulk-assignment-toolbar"
+                    class="bulk-assignment-toolbar"
+                    data-manage-only
+                    hidden
+                >
+
+                    <div class="bulk-selection-info">
+
+                        <div class="bulk-selection-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong id="bulk-selected-count">
+                                0 leads selected
+                            </strong>
+                            <p id="bulk-selection-detail">
+                                Select leads using the table checkboxes.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="bulk-selection-actions">
+
+                        <button
+                            type="button"
+                            id="select-current-page-btn"
+                            class="bulk-secondary-btn"
+                        >
+                            Select Current Page
+                        </button>
+
+                        <button
+                            type="button"
+                            id="select-all-filtered-btn"
+                            class="bulk-secondary-btn"
+                        >
+                            Select All Filtered
+                        </button>
+
+                        <button
+                            type="button"
+                            id="clear-selected-leads-btn"
+                            class="bulk-secondary-btn"
+                        >
+                            Clear Selection
+                        </button>
+
+                    </div>
+
+
+                    <div class="bulk-assignment-controls">
+
+                        <div class="bulk-assignee-field">
+                            <label for="bulk-assignee-select">
+                                Assign selected leads to
+                            </label>
+                            <select id="bulk-assignee-select">
+                                <option value="">
+                                    Select Employee
+                                </option>
+                            </select>
+                        </div>
+
+                        <label class="bulk-overwrite-option">
+                            <input
+                                type="checkbox"
+                                id="include-assigned-leads"
+                            >
+                            <span>
+                                Include already assigned leads
+                            </span>
+                        </label>
+
+                        <button
+                            type="button"
+                            id="bulk-assign-btn"
+                            class="bulk-assign-btn"
+                            disabled
+                        >
+                            Assign Selected
+                        </button>
+
+                        <button
+                            type="button"
+                            id="bulk-unassign-btn"
+                            class="bulk-unassign-btn"
+                            disabled
+                        >
+                            Unassign Selected
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- RESULT COUNT -->
+
+                <div class="leads-result-summary">
+
+                    <p id="leads-result-count">
+                        Loading leads...
+                    </p>
+
+                    <p
+                        class="bulk-selection-hint"
+                        data-manage-only
+                        hidden
+                    >
+                        Select a lead checkbox to open bulk actions.
+                    </p>
+
+                </div>
+
+
+                <!-- LEADS TABLE -->
+
+                <div class="table-wrapper leads-table-wrapper">
+
+                    <table class="all-leads-table">
+
+                        <thead>
+
+                           <tr>
+    <th class="lead-select-column">
+        <input
+            type="checkbox"
+            id="select-current-page-checkbox"
+            class="lead-selection-checkbox"
+            aria-label="Select all leads on this page"
+        >
+    </th>
+    <th>Lead</th>
+    <th>Contact</th>
+    <th>Company</th>
+    <th>Service</th>
+    <th>Source</th>
+    <th>Priority</th>
+    <th>Assigned To</th>
+    <th>Status</th>
+    <th>Created</th>
+    <th>Action</th>
+</tr>
+
+                        </thead>
+
+
+                        <tbody id="all-leads-table-body">
+
+                            <tr>
+
+                                <td colspan="11">
+                                    Loading leads...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <!-- PAGINATION -->
+
+                <div class="leads-pagination">
+
+                    <button
+                        type="button"
+                        id="previous-page-btn"
+                        class="pagination-btn"
+                    >
+                        Previous
+                    </button>
+
+
+                    <p id="pagination-info">
+                        Page 1 of 1
+                    </p>
+
+
+                    <button
+                        type="button"
+                        id="next-page-btn"
+                        class="pagination-btn"
+                    >
+                        Next
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- SCRIPTS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="config.js"></script>
+
+    <script src="common.js"></script>
+<script src="security.js"></script>
+
+    <script src="leads.js"></script>
+
+</body>
+
+</html>

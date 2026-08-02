@@ -141,3 +141,8 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Local website backups and archives
+mk-automation-solutions-latest.zip
+website_backup_before_team_update/
+website_before_v2/

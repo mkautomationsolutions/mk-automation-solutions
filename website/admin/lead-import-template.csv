@@ -1,0 +1,4 @@
+name,phone,email,company,service,lead_source,priority,status,assigned_to_email,follow_up_date,message,notes
+Ravi Kumar,9876543210,ravi@example.com,Ravi Enterprises,workflow-automation,referral,high,new,,2026-07-30 17:00,Needs n8n sales follow-up automation,Call after 5 PM
+Suresh Babu,9123456780,suresh@example.com,ABC Traders,whatsapp-automation,linkedin,medium,new,,,Needs WhatsApp enquiry and follow-up automation,
+Anita Rao,9988776655,anita@example.com,Rao Consulting,ai-agents,upwork,high,new,,,Needs an AI agent for customer support,

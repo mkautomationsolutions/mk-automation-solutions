@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" class="crm-settings-loading crm-access-loading crm-data-loading">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+
+    <title>
+        MK Automation Solutions | Import Leads
+    </title>
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="import-leads.css">
+</head>
+
+<body data-crm-access="manage">
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <div class="brand-icon">
+                    MK
+                </div>
+
+                <div>
+                    <h2 data-business-name>
+                        MK Automation Solutions
+                    </h2>
+                    <p>Admin CRM</p>
+                </div>
+
+            </div>
+
+            <nav class="sidebar-menu">
+
+                <a href="index.html" class="menu-item">
+                    <span>📊</span>
+                    Dashboard
+                </a>
+
+                <a href="leads.html" class="menu-item active">
+                    <span>👥</span>
+                    Leads
+                </a>
+
+                <a href="followups.html" class="menu-item">
+                    <span>📅</span>
+                    Follow-ups
+                </a>
+
+                <a href="analytics.html" class="menu-item">
+                    <span>📈</span>
+                    Analytics
+                </a>
+
+                <a
+                    href="team.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🧑‍💼</span>
+                    Team
+                </a>
+
+                <a
+
+                    href="source-rules.html"
+
+                    class="menu-item"
+
+                    data-manage-only
+
+                    hidden
+
+                >
+
+                    <span>🔌</span>
+
+                    Sources
+
+                </a>
+
+                <a
+                    href="reports.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>📄</span>
+                    Reports
+                </a>
+
+                <a
+                    href="system-check.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🛡️</span>
+                    System Check
+                </a>
+
+                <a href="settings.html" class="menu-item" data-manage-only hidden>
+                    <span>⚙️</span>
+                    Settings
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="../index.html">
+                    ← Visit Website
+                </a>
+            </div>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+
+                <div>
+                    <p class="page-label">
+                        BULK LEAD INTAKE
+                    </p>
+                    <h1>
+                        Import Leads
+                    </h1>
+                    <p class="import-page-description">
+                        Upload CSV or Excel, validate every row, check duplicates and import valid leads safely.
+                    </p>
+                </div>
+
+                <div class="admin-profile">
+
+                    <a
+                        href="leads.html"
+                        class="import-back-btn"
+                    >
+                        ← Back to Leads
+                    </a>
+
+                    <button
+                        type="button"
+                        id="logout-btn"
+                        class="logout-btn"
+                    >
+                        Logout
+                    </button>
+
+                    <div
+                        class="profile-avatar"
+                        data-admin-initials
+                        data-current-user-initials
+                    >
+                        MM
+                    </div>
+
+                    <div>
+                        <strong data-admin-name data-current-user-name>
+                            Mohan
+                        </strong>
+                        <p data-current-user-role>
+                            Administrator
+                        </p>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <div
+                id="import-page-message"
+                class="import-page-message"
+                hidden
+                role="status"
+                aria-live="polite"
+            ></div>
+
+
+            <section class="import-overview-grid">
+
+                <article class="import-overview-card">
+                    <span class="import-overview-icon">1</span>
+                    <div>
+                        <strong>Download Template</strong>
+                        <p>Use the fixed CRM column format.</p>
+                    </div>
+                </article>
+
+                <article class="import-overview-card">
+                    <span class="import-overview-icon">2</span>
+                    <div>
+                        <strong>Fill & Upload</strong>
+                        <p>Add leads in CSV or Excel.</p>
+                    </div>
+                </article>
+
+                <article class="import-overview-card">
+                    <span class="import-overview-icon">3</span>
+                    <div>
+                        <strong>Validate & Import</strong>
+                        <p>Review duplicates and invalid rows.</p>
+                    </div>
+                </article>
+
+            </section>
+
+
+            <section class="import-workspace">
+
+                <div class="import-card import-template-card">
+
+                    <div class="import-card-header">
+                        <div>
+                            <p class="import-card-label">
+                                STEP 1
+                            </p>
+                            <h2>
+                                Download Fixed Template
+                            </h2>
+                            <span>
+                                Keep the header names unchanged. Sample rows can be replaced with your real leads.
+                            </span>
+                        </div>
+                        <div class="import-card-badge">
+                            Required format
+                        </div>
+                    </div>
+
+                    <div class="template-download-grid">
+
+                        <a
+                            href="lead-import-template.xlsx"
+                            download
+                            class="template-download-card"
+                        >
+                            <span class="template-format-icon">XLSX</span>
+                            <div>
+                                <strong>Excel Template</strong>
+                                <p>Dropdowns and instructions included.</p>
+                            </div>
+                            <span class="template-download-arrow">↓</span>
+                        </a>
+
+                        <a
+                            href="lead-import-template.csv"
+                            download
+                            class="template-download-card"
+                        >
+                            <span class="template-format-icon csv">CSV</span>
+                            <div>
+                                <strong>CSV Template</strong>
+                                <p>Simple format for any spreadsheet app.</p>
+                            </div>
+                            <span class="template-download-arrow">↓</span>
+                        </a>
+
+                    </div>
+
+                    <div class="required-column-note">
+                        <strong>Required columns:</strong>
+                        <span>name</span>
+                        <span>phone</span>
+                        <span>service</span>
+                        <span>lead_source</span>
+                    </div>
+
+                </div>
+
+
+                <div class="import-card">
+
+                    <div class="import-card-header">
+                        <div>
+                            <p class="import-card-label">
+                                STEP 2
+                            </p>
+                            <h2>
+                                Upload Lead File
+                            </h2>
+                            <span>
+                                Supported files: CSV, XLSX and XLS. Maximum recommended size: 5,000 rows per import.
+                            </span>
+                        </div>
+                    </div>
+
+                    <label
+                        for="lead-import-file"
+                        id="lead-upload-zone"
+                        class="lead-upload-zone"
+                    >
+                        <input
+                            type="file"
+                            id="lead-import-file"
+                            accept=".csv,.xlsx,.xls,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+                            hidden
+                        >
+
+                        <span class="lead-upload-icon">⇧</span>
+                        <strong>Choose a lead file</strong>
+                        <p>or drag and drop the file here</p>
+                        <span class="lead-upload-limit">CSV / XLSX / XLS</span>
+                    </label>
+
+                    <div
+                        id="selected-file-card"
+                        class="selected-file-card"
+                        hidden
+                    >
+                        <div class="selected-file-icon">📄</div>
+                        <div class="selected-file-details">
+                            <strong id="selected-file-name">File name</strong>
+                            <span id="selected-file-size">0 KB</span>
+                        </div>
+                        <button
+                            type="button"
+                            id="remove-import-file-btn"
+                            class="remove-import-file-btn"
+                        >
+                            Remove
+                        </button>
+                    </div>
+
+                    <div class="import-settings-grid">
+
+                        <div class="import-setting-group">
+                            <label for="duplicate-strategy">
+                                Duplicate handling
+                            </label>
+                            <select id="duplicate-strategy">
+                                <option value="skip">
+                                    Skip existing phone/email duplicates
+                                </option>
+                                <option value="update">
+                                    Update the matching existing lead
+                                </option>
+                            </select>
+                            <p>
+                                Duplicate matching uses normalized phone first, then email.
+                            </p>
+                        </div>
+
+                        <div class="import-setting-group">
+                            <label for="default-import-assignee">
+                                Default assignee for blank rows
+                            </label>
+                            <select id="default-import-assignee">
+                                <option value="">
+                                    Keep Unassigned
+                                </option>
+                            </select>
+                            <p>
+                                assigned_to_email in the file takes priority over this selection.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="upload-actions">
+                        <button
+                            type="button"
+                            id="validate-import-btn"
+                            class="validate-import-btn"
+                            disabled
+                        >
+                            Validate File
+                        </button>
+
+                        <button
+                            type="button"
+                            id="clear-import-btn"
+                            class="clear-import-btn"
+                        >
+                            Clear
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="validation-section"
+                    class="import-card validation-section"
+                    hidden
+                >
+
+                    <div class="import-card-header">
+                        <div>
+                            <p class="import-card-label">
+                                STEP 3
+                            </p>
+                            <h2>
+                                Validation Results
+                            </h2>
+                            <span>
+                                Check the summary and preview before importing.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="validation-summary-grid">
+
+                        <article class="validation-summary-card total">
+                            <span>Total Rows</span>
+                            <strong id="validation-total-count">0</strong>
+                        </article>
+
+                        <article class="validation-summary-card valid">
+                            <span>Ready to Import</span>
+                            <strong id="validation-valid-count">0</strong>
+                        </article>
+
+                        <article class="validation-summary-card duplicate">
+                            <span>Duplicates</span>
+                            <strong id="validation-duplicate-count">0</strong>
+                        </article>
+
+                        <article class="validation-summary-card invalid">
+                            <span>Invalid Rows</span>
+                            <strong id="validation-invalid-count">0</strong>
+                        </article>
+
+                        <article class="validation-summary-card update">
+                            <span>Will Update</span>
+                            <strong id="validation-update-count">0</strong>
+                        </article>
+
+                    </div>
+
+                    <div class="preview-toolbar">
+                        <div>
+                            <label for="preview-status-filter">
+                                Preview rows
+                            </label>
+                            <select id="preview-status-filter">
+                                <option value="all">All rows</option>
+                                <option value="valid">Ready to import</option>
+                                <option value="duplicate">Duplicates</option>
+                                <option value="invalid">Invalid rows</option>
+                                <option value="update">Rows to update</option>
+                            </select>
+                        </div>
+
+                        <p id="preview-row-summary">
+                            0 rows
+                        </p>
+                    </div>
+
+                    <div class="import-preview-wrapper">
+                        <table class="import-preview-table">
+                            <thead>
+                                <tr>
+                                    <th>Row</th>
+                                    <th>Validation</th>
+                                    <th>Name</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Service</th>
+                                    <th>Source</th>
+                                    <th>Priority</th>
+                                    <th>Assigned To</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody id="import-preview-body"></tbody>
+                        </table>
+                    </div>
+
+                    <div class="validation-actions">
+                        <button
+                            type="button"
+                            id="download-validation-errors-btn"
+                            class="download-errors-btn"
+                            disabled
+                        >
+                            Download Error Rows
+                        </button>
+
+                        <button
+                            type="button"
+                            id="import-valid-leads-btn"
+                            class="import-valid-leads-btn"
+                            disabled
+                        >
+                            Import Valid Leads
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="import-progress-section"
+                    class="import-card import-progress-section"
+                    hidden
+                >
+                    <div class="import-progress-heading">
+                        <div>
+                            <p class="import-card-label">IMPORTING</p>
+                            <h2 id="import-progress-title">
+                                Saving leads to CRM...
+                            </h2>
+                        </div>
+                        <strong id="import-progress-percent">0%</strong>
+                    </div>
+
+                    <div class="import-progress-track">
+                        <div id="import-progress-bar"></div>
+                    </div>
+
+                    <p id="import-progress-message">
+                        Preparing import...
+                    </p>
+                </div>
+
+
+                <div
+                    id="import-result-section"
+                    class="import-card import-result-section"
+                    hidden
+                >
+                    <div class="import-result-icon">✓</div>
+                    <div class="import-result-content">
+                        <p class="import-card-label">
+                            IMPORT COMPLETE
+                        </p>
+                        <h2 id="import-result-title">
+                            Leads imported successfully
+                        </h2>
+                        <p id="import-result-message"></p>
+
+                        <div class="import-result-statistics">
+                            <span>
+                                Imported
+                                <strong id="result-imported-count">0</strong>
+                            </span>
+                            <span>
+                                Updated
+                                <strong id="result-updated-count">0</strong>
+                            </span>
+                            <span>
+                                Skipped
+                                <strong id="result-skipped-count">0</strong>
+                            </span>
+                            <span>
+                                Failed
+                                <strong id="result-failed-count">0</strong>
+                            </span>
+                        </div>
+
+                        <div class="import-result-actions">
+                            <a href="leads.html" class="view-imported-leads-btn">
+                                View Leads
+                            </a>
+                            <button
+                                type="button"
+                                id="import-another-file-btn"
+                                class="import-another-file-btn"
+                            >
+                                Import Another File
+                            </button>
+                            <button
+                                type="button"
+                                id="download-import-failures-btn"
+                                class="download-import-failures-btn"
+                                hidden
+                            >
+                                Download Failed Rows
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="config.js"></script>
+    <script src="common.js"></script>
+<script src="security.js"></script>
+    <script src="import-leads.js"></script>
+
+</body>
+</html>

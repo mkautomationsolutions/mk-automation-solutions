@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html
+    lang="en"
+    class="crm-settings-loading"
+>
+
+<head>
+    <meta name="robots" content="noindex,nofollow,noarchive">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Accept Invitation | MK Automation CRM
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="accept-invite.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <main class="invite-page">
+
+
+        <section class="invite-card">
+
+
+            <!-- =================================
+                 LEFT INFORMATION PANEL
+            ================================== -->
+
+            <div class="invite-information">
+
+
+                <div class="invite-brand">
+
+
+                    <div
+                        class="invite-logo"
+                        data-admin-initials
+                    >
+                        MK
+                    </div>
+
+
+                    <div>
+
+                        <h2 data-business-name>
+                            MK Automation Solutions
+                        </h2>
+
+                        <p>
+                            Customer Relationship Management
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="invite-welcome-content">
+
+
+                    <p class="invite-label">
+                        TEAM INVITATION
+                    </p>
+
+
+                    <h1>
+                        Welcome to the CRM Team
+                    </h1>
+
+
+                    <p>
+
+                        Your administrator has invited you to access the
+                        CRM. Create a secure password to complete your
+                        account setup.
+
+                    </p>
+
+
+                    <div class="invite-feature-list">
+
+
+                        <div>
+
+                            <span>
+                                ✓
+                            </span>
+
+                            <p>
+                                Access assigned customer leads
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                ✓
+                            </span>
+
+                            <p>
+                                Manage follow-ups and lead status
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                ✓
+                            </span>
+
+                            <p>
+                                Maintain complete lead activity history
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <p class="invite-security-note">
+
+                    Your account access is protected by Supabase
+                    Authentication.
+
+                </p>
+
+
+            </div>
+
+
+            <!-- =================================
+                 PASSWORD SETUP PANEL
+            ================================== -->
+
+            <div class="invite-form-panel">
+
+
+                <div class="invite-form-heading">
+
+
+                    <p>
+                        ACCOUNT SETUP
+                    </p>
+
+
+                    <h2>
+                        Create Your Password
+                    </h2>
+
+
+                    <span>
+
+                        Use at least 8 characters with a combination of
+                        letters and numbers.
+
+                    </span>
+
+
+                </div>
+
+
+                <!-- =================================
+                     INITIAL LOADING
+                ================================== -->
+
+                <div
+                    id="invite-session-loading"
+                    class="invite-session-loading"
+                >
+
+                    Verifying your invitation...
+
+                </div>
+
+
+                <!-- =================================
+                     INVALID INVITE STATE
+                ================================== -->
+
+                <div
+                    id="invite-invalid-state"
+                    class="invite-invalid-state"
+                    hidden
+                >
+
+
+                    <div class="invite-state-icon">
+                        ⚠️
+                    </div>
+
+
+                    <h3>
+                        Invitation is unavailable
+                    </h3>
+
+
+                    <p id="invite-invalid-message">
+
+                        This invitation link may be invalid or expired.
+                        Ask your administrator to send a new invitation.
+
+                    </p>
+
+
+                    <a
+                        href="login.html"
+                        class="invite-login-link"
+                    >
+                        Go to CRM Login
+                    </a>
+
+
+                </div>
+
+
+                <!-- =================================
+                     PASSWORD FORM
+                ================================== -->
+
+                <form
+                    id="accept-invite-form"
+                    hidden
+                >
+
+
+                    <div class="invite-account-info">
+
+
+                        <span>
+                            Invited account
+                        </span>
+
+
+                        <strong id="invited-user-email">
+                            employee@example.com
+                        </strong>
+
+
+                    </div>
+
+
+                    <div class="invite-form-group">
+
+
+                        <label for="invite-password">
+
+                            New Password
+                            <span>*</span>
+
+                        </label>
+
+
+                        <div class="invite-password-field">
+
+
+                            <input
+                                type="password"
+                                id="invite-password"
+                                placeholder="Enter new password"
+                                minlength="8"
+                                autocomplete="new-password"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="invite-password-toggle"
+                                data-password-toggle="invite-password"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="invite-form-group">
+
+
+                        <label for="invite-confirm-password">
+
+                            Confirm Password
+                            <span>*</span>
+
+                        </label>
+
+
+                        <div class="invite-password-field">
+
+
+                            <input
+                                type="password"
+                                id="invite-confirm-password"
+                                placeholder="Enter password again"
+                                minlength="8"
+                                autocomplete="new-password"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="invite-password-toggle"
+                                data-password-toggle="invite-confirm-password"
+                                aria-label="Show confirm password"
+                            >
+                                Show
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="invite-password-rules">
+
+
+                        <p>
+                            Password requirements
+                        </p>
+
+
+                        <ul>
+
+                            <li id="rule-length">
+                                At least 8 characters
+                            </li>
+
+                            <li id="rule-letter">
+                                Contains a letter
+                            </li>
+
+                            <li id="rule-number">
+                                Contains a number
+                            </li>
+
+                            <li id="rule-match">
+                                Both passwords match
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+
+                    <div
+                        id="invite-form-message"
+                        class="invite-form-message"
+                        hidden
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <button
+                        type="submit"
+                        id="create-password-btn"
+                        class="create-password-btn"
+                    >
+                        Create Password & Continue
+                    </button>
+
+
+                    <p class="invite-login-help">
+
+                        Already completed the setup?
+
+                        <a href="login.html">
+                            Sign in to CRM
+                        </a>
+
+                    </p>
+
+
+                </form>
+
+
+                <!-- =================================
+                     SUCCESS STATE
+                ================================== -->
+
+                <div
+                    id="invite-success-state"
+                    class="invite-success-state"
+                    hidden
+                >
+
+
+                    <div class="invite-state-icon success">
+                        ✓
+                    </div>
+
+
+                    <h3>
+                        Account setup complete
+                    </h3>
+
+
+                    <p>
+
+                        Your password has been created successfully.
+                        Redirecting you to the CRM dashboard...
+
+                    </p>
+
+
+                    <a
+                        href="index.html"
+                        class="invite-dashboard-link"
+                    >
+                        Continue to Dashboard
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =================================
+         SCRIPTS
+    ================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="config.js"></script>
+
+    <script src="common.js"></script>
+
+    <script src="accept-invite.js"></script>
+
+
+</body>
+
+</html>

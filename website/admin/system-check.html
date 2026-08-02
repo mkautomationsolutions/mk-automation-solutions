@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="crm-settings-loading crm-access-loading crm-data-loading">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>MK Automation Solutions | System Check</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="system-check.css">
+</head>
+<body data-crm-access="manage">
+<div class="dashboard-layout">
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">MK</div>
+            <div>
+                <h2 data-business-name>MK Automation Solutions</h2>
+                <p>Admin CRM</p>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a href="index.html" class="menu-item"><span>📊</span>Dashboard</a>
+            <a href="leads.html" class="menu-item"><span>👥</span>Leads</a>
+            <a href="followups.html" class="menu-item"><span>📅</span>Follow-ups</a>
+            <a href="analytics.html" class="menu-item"><span>📈</span>Analytics</a>
+            <a href="team.html" class="menu-item" data-manage-only hidden><span>🧑‍💼</span>Team</a>
+            <a href="source-rules.html" class="menu-item" data-manage-only hidden><span>🔌</span>Sources</a>
+            <a href="reports.html" class="menu-item" data-manage-only hidden><span>📄</span>Reports</a>
+            <a href="system-check.html" class="menu-item active" data-manage-only hidden><span>🛡️</span>System Check</a>
+            <a href="settings.html" class="menu-item" data-manage-only hidden><span>⚙️</span>Settings</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="../index.html">← Visit Website</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="dashboard-header system-check-header">
+            <div>
+                <p class="page-label">SECURITY & QUALITY</p>
+                <h1>CRM System Check</h1>
+                <p class="system-check-subtitle">Run safe, read-only checks before production deployment.</p>
+            </div>
+
+            <div class="system-check-actions">
+                <button type="button" id="system-check-export" class="system-check-secondary">Export Results</button>
+                <button type="button" id="system-check-run" class="system-check-primary">Run All Checks</button>
+                <button type="button" id="logout-btn" class="logout-btn">Logout</button>
+                <div class="profile-avatar" data-admin-initials data-current-user-initials>MK</div>
+                <div class="system-check-profile-copy">
+                    <strong data-admin-name data-current-user-name>Administrator</strong>
+                    <p data-current-user-role>Administrator</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="system-check-summary" aria-label="System check summary">
+            <article class="system-summary-card">
+                <span class="system-summary-icon pass">✓</span>
+                <div><span>Passed</span><strong id="system-check-pass-count">0</strong></div>
+            </article>
+            <article class="system-summary-card">
+                <span class="system-summary-icon warning">!</span>
+                <div><span>Warnings</span><strong id="system-check-warning-count">0</strong></div>
+            </article>
+            <article class="system-summary-card">
+                <span class="system-summary-icon fail">×</span>
+                <div><span>Failed</span><strong id="system-check-fail-count">0</strong></div>
+            </article>
+            <article class="system-summary-card system-summary-wide">
+                <div>
+                    <span>Overall Status</span>
+                    <strong id="system-check-overall">Not run</strong>
+                    <small id="system-check-generated-at">Run the checks to generate a report.</small>
+                </div>
+            </article>
+        </section>
+
+        <div id="system-check-message" class="system-check-message" hidden role="status" aria-live="polite"></div>
+
+        <section class="system-check-info-card">
+            <div>
+                <span class="system-check-info-icon">ℹ️</span>
+            </div>
+            <div>
+                <h2>What this page checks</h2>
+                <p>Login access, management role, Supabase connectivity, important CRM tables, browser secret protection, session timeout and production-readiness warnings. It does not insert, update or delete CRM data.</p>
+            </div>
+        </section>
+
+        <section id="system-check-groups" class="system-check-groups"></section>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="common.js"></script>
+<script src="security.js"></script>
+<script src="system-check.js"></script>
+</body>
+</html>

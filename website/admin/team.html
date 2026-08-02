@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+
+<html
+    lang="en"
+    class="crm-settings-loading crm-access-loading crm-data-loading"
+>
+
+<head>
+    <meta name="robots" content="noindex,nofollow,noarchive">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Team Members | MK Automation CRM
+    </title>
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="team.css"
+    >
+
+</head>
+
+
+<body data-crm-access="manage">
+
+    <div class="dashboard-layout">
+
+
+        <!-- =================================
+             SIDEBAR
+        ================================== -->
+
+        <aside class="sidebar">
+
+
+            <div class="sidebar-brand">
+
+                <div
+                    class="brand-icon"
+                    data-admin-initials
+                >
+                    MK
+                </div>
+
+
+                <div>
+
+                    <h2 data-business-name>
+                        MK Automation Solutions
+                    </h2>
+
+                    <p>
+                        Admin CRM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+
+                <a href="index.html" class="menu-item">
+
+                    <span>
+                        📊
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="leads.html" class="menu-item">
+
+                    <span>
+                        👥
+                    </span>
+
+                    Leads
+
+                </a>
+
+
+                <a href="followups.html" class="menu-item">
+
+                    <span>
+                        📅
+                    </span>
+
+                    Follow-ups
+
+                </a>
+
+
+                <a href="analytics.html" class="menu-item">
+
+                    <span>
+                        📈
+                    </span>
+
+                    Analytics
+
+                </a>
+
+
+                <a
+                    href="team.html"
+                    class="menu-item active"
+                >
+
+                    <span>
+                        🧑‍💼
+                    </span>
+
+                    Team
+
+                </a>
+
+
+                <a
+
+                    href="source-rules.html"
+
+                    class="menu-item"
+
+                    data-manage-only
+
+                    hidden
+
+                >
+
+                    <span>🔌</span>
+
+                    Sources
+
+                </a>
+
+                <a
+                    href="reports.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>📄</span>
+                    Reports
+                </a>
+
+                <a
+                    href="system-check.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🛡️</span>
+                    System Check
+                </a>
+
+                <a href="settings.html" class="menu-item" data-manage-only hidden>
+
+                    <span>
+                        ⚙️
+                    </span>
+
+                    Settings
+
+                </a>
+
+
+            </nav>
+
+
+            <div class="sidebar-footer">
+
+                <a href="../index.html">
+
+                    ← Visit Website
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- =================================
+             MAIN CONTENT
+        ================================== -->
+
+        <main class="main-content">
+
+
+            <!-- =================================
+                 TOP HEADER
+            ================================== -->
+
+            <header class="dashboard-header">
+
+
+                <div>
+
+                    <p class="page-label">
+                        TEAM MANAGEMENT
+                    </p>
+
+                    <h1>
+                        Team Members
+                    </h1>
+
+                    <p class="page-description">
+
+                        Manage administrators, managers and employees.
+
+                    </p>
+
+                </div>
+
+
+                <div class="admin-profile">
+
+
+                    <button
+                        type="button"
+                        id="add-member-btn"
+                        class="primary-action-btn"
+                    >
+                        + Add Team Member
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="logout-btn"
+                        class="logout-btn"
+                    >
+                        Logout
+                    </button>
+
+
+                    <div
+                        class="profile-avatar"
+                        data-admin-initials
+                    data-current-user-initials
+                    >
+                        MK
+                    </div>
+
+
+                    <div class="profile-details">
+
+                        <strong data-admin-name data-current-user-name>
+                            Administrator
+                        </strong>
+
+                        <p data-current-user-role>
+                            Administrator
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+
+
+            <!-- =================================
+                 PAGE MESSAGE
+            ================================== -->
+
+            <div
+                id="team-page-message"
+                class="team-page-message"
+                hidden
+                role="status"
+                aria-live="polite"
+            ></div>
+
+
+            <!-- =================================
+                 TEAM STATISTICS
+            ================================== -->
+
+            <section class="team-statistics">
+
+
+                <article class="team-stat-card">
+
+                    <div class="team-stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Members
+                        </span>
+
+                        <strong id="team-total-count">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="team-stat-card">
+
+                    <div class="team-stat-icon">
+                        ✅
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Active Members
+                        </span>
+
+                        <strong id="team-active-count">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="team-stat-card">
+
+                    <div class="team-stat-icon">
+                        🛡️
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Managers
+                        </span>
+
+                        <strong id="team-manager-count">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="team-stat-card">
+
+                    <div class="team-stat-icon">
+                        👤
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Employees
+                        </span>
+
+                        <strong id="team-employee-count">
+                            0
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <!-- =================================
+                 TEAM MEMBERS CARD
+            ================================== -->
+
+            <section class="team-members-card">
+
+
+                <div class="team-card-header">
+
+
+                    <div>
+
+                        <h2>
+                            Team Directory
+                        </h2>
+
+                        <p>
+                            View and manage CRM team access.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="refresh-team-btn"
+                        class="secondary-action-btn"
+                    >
+                        Refresh
+                    </button>
+
+
+                </div>
+
+
+                <!-- =================================
+                     FILTERS
+                ================================== -->
+
+                <div class="team-filters">
+
+
+                    <div class="team-search-field">
+
+                        <label for="team-search">
+                            Search
+                        </label>
+
+                        <input
+                            type="search"
+                            id="team-search"
+                            placeholder="Search name, email or phone"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="team-role-filter">
+                            Role
+                        </label>
+
+                        <select id="team-role-filter">
+
+                            <option value="all">
+                                All Roles
+                            </option>
+
+                            <option value="admin">
+                                Administrator
+                            </option>
+
+                            <option value="manager">
+                                Manager
+                            </option>
+
+                            <option value="employee">
+                                Employee
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="team-status-filter">
+                            Status
+                        </label>
+
+                        <select id="team-status-filter">
+
+                            <option value="all">
+                                All Status
+                            </option>
+
+                            <option value="active">
+                                Active
+                            </option>
+
+                            <option value="invited">
+                                Invited
+                            </option>
+
+                            <option value="inactive">
+                                Inactive
+                            </option>
+
+                            <option value="archived">
+                                Archived
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =================================
+                     LOADING STATE
+                ================================== -->
+
+                <div
+                    id="team-loading"
+                    class="team-loading"
+                >
+                    Loading team members...
+                </div>
+
+
+                <!-- =================================
+                     EMPTY STATE
+                ================================== -->
+
+                <div
+                    id="team-empty"
+                    class="team-empty"
+                    hidden
+                >
+
+                    <div class="team-empty-icon">
+                        👥
+                    </div>
+
+                    <h3>
+                        No team members found
+                    </h3>
+
+                    <p>
+                        Add your first CRM team member to get started.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================
+                     TEAM TABLE
+                ================================== -->
+
+                <div
+                    id="team-table-wrapper"
+                    class="team-table-wrapper"
+                    hidden
+                >
+
+                    <table class="team-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Team Member
+                                </th>
+
+                                <th>
+                                    Contact
+                                </th>
+
+                                <th>
+                                    Role
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Assigned Leads
+                                </th>
+
+                                <th>
+                                    Joined
+                                </th>
+
+                                <th>
+                                    Actions
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="team-table-body">
+
+                            <!-- JavaScript inserts members here -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =================================
+         ADD / EDIT MEMBER MODAL
+    ================================== -->
+
+    <div
+        id="team-modal"
+        class="team-modal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="team-modal-backdrop"
+            data-close-team-modal
+        ></div>
+
+
+        <section
+            class="team-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="team-modal-title"
+        >
+
+
+            <div class="team-modal-header">
+
+
+                <div>
+
+                    <p>
+                        TEAM MEMBER
+                    </p>
+
+                    <h2 id="team-modal-title">
+                        Add Team Member
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="close-team-modal-btn"
+                    class="team-modal-close-btn"
+                    aria-label="Close team member form"
+                >
+                    ×
+                </button>
+
+
+            </div>
+
+
+            <form id="team-member-form">
+
+
+                <input
+                    type="hidden"
+                    id="member-id"
+                >
+
+
+                <div class="team-form-grid">
+
+
+                    <div class="team-form-group team-form-full">
+
+                        <label for="member-full-name">
+
+                            Full Name
+                            <span>*</span>
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="member-full-name"
+                            placeholder="Enter employee full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="team-form-group">
+
+                        <label for="member-email">
+
+                            Email Address
+                            <span>*</span>
+
+                        </label>
+
+                        <input
+                            type="email"
+                            id="member-email"
+                            placeholder="employee@example.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="team-form-group">
+
+                        <label for="member-phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="member-phone"
+                            placeholder="9876543210"
+                        >
+
+                    </div>
+
+
+                    <div class="team-form-group">
+
+                        <label for="member-role">
+
+                            CRM Role
+                            <span>*</span>
+
+                        </label>
+
+                        <select
+                            id="member-role"
+                            required
+                        >
+
+                            <option value="employee">
+                                Employee
+                            </option>
+
+                            <option value="manager">
+                                Manager
+                            </option>
+
+                            <option value="admin">
+                                Administrator
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="team-form-group">
+
+                        <label for="member-status">
+
+                            Account Status
+                            <span>*</span>
+
+                        </label>
+
+                        <select
+                            id="member-status"
+                            required
+                        >
+
+                            <option value="invited">
+                                Invited
+                            </option>
+
+                            <option value="active">
+                                Active
+                            </option>
+
+                            <option value="inactive">
+                                Inactive
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="team-form-group team-form-full">
+
+                        <label class="team-test-toggle" for="member-is-test">
+                            <input type="checkbox" id="member-is-test">
+                            <span class="team-test-toggle-copy">
+                                <strong>Test account</strong>
+                                <small>Only accounts marked as test can be permanently deleted.</small>
+                            </span>
+                        </label>
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    id="team-form-message"
+                    class="team-form-message"
+                    hidden
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+
+                <div class="team-modal-actions">
+
+
+                    <button
+                        type="button"
+                        class="modal-cancel-btn"
+                        data-close-team-modal
+                    >
+                        Cancel
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        id="save-member-btn"
+                        class="modal-save-btn"
+                    >
+                        Save Team Member
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </section>
+
+    </div>
+
+
+    <!-- =================================
+         ARCHIVE MEMBER MODAL
+    ================================== -->
+
+    <div
+        id="archive-member-modal"
+        class="team-modal"
+        aria-hidden="true"
+    >
+        <div
+            class="team-modal-backdrop"
+            data-close-archive-modal
+        ></div>
+
+        <section
+            class="team-modal-content team-archive-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="archive-member-title"
+        >
+            <div class="team-modal-header">
+                <div>
+                    <p>ARCHIVE MEMBER</p>
+                    <h2 id="archive-member-title">Archive Team Member</h2>
+                </div>
+
+                <button
+                    type="button"
+                    id="close-archive-modal-btn"
+                    class="team-modal-close-btn"
+                    aria-label="Close archive dialog"
+                >×</button>
+            </div>
+
+            <form id="archive-member-form" class="team-archive-form">
+                <input type="hidden" id="archive-member-id">
+
+                <div class="team-archive-summary">
+                    <strong id="archive-member-name">Team member</strong>
+                    <p>Archiving blocks login access, removes the member from active assignment lists and preserves CRM history.</p>
+                </div>
+
+                <div class="team-form-group team-form-full">
+                    <label for="archive-transfer-to">
+                        Transfer active assigned leads
+                    </label>
+                    <select id="archive-transfer-to">
+                        <option value="">No transfer required</option>
+                    </select>
+                    <small id="archive-transfer-help" class="team-field-help">No active assigned leads found.</small>
+                </div>
+
+                <div
+                    id="archive-member-message"
+                    class="team-form-message"
+                    hidden
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+                <div class="team-modal-actions">
+                    <button
+                        type="button"
+                        class="modal-cancel-btn"
+                        data-close-archive-modal
+                    >Cancel</button>
+
+                    <button
+                        type="submit"
+                        id="confirm-archive-member-btn"
+                        class="modal-archive-btn"
+                    >Archive Member</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+
+    <!-- =================================
+         SCRIPTS
+    ================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="config.js"></script>
+
+    <script src="common.js"></script>
+<script src="security.js"></script>
+
+    <script src="team.js"></script>
+
+
+</body>
+
+</html>

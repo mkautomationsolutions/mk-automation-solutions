@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en" class="crm-settings-loading crm-access-loading crm-data-loading">
+
+<head>
+    <meta name="robots" content="noindex,nofollow,noarchive">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        MK Automation Solutions | Admin Dashboard
+    </title>
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <div class="brand-icon">
+                    MK
+                </div>
+
+                <div>
+
+                
+                        <h2 data-business-name>
+    MK Automation Solutions
+</h2>
+                
+
+                    <p>
+                        Admin CRM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a href="index.html" class="menu-item active">
+
+                    <span>📊</span>
+
+                    Dashboard
+
+                </a>
+
+
+             <a
+    href="leads.html"
+    class="menu-item"
+>
+
+                    <span>👥</span>
+
+                    Leads
+
+                </a>
+
+
+                <a href="followups.html" class="menu-item">
+
+                    <span>📅</span>
+
+                    Follow-ups
+
+                </a>
+
+
+                <a href="analytics.html" class="menu-item">
+
+                    <span>📈</span>
+
+                    Analytics
+
+                </a>
+
+
+                <a
+                    href="team.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+
+                    <span>🧑‍💼</span>
+
+                    Team
+
+                </a>
+
+
+                <a
+
+                    href="source-rules.html"
+
+                    class="menu-item"
+
+                    data-manage-only
+
+                    hidden
+
+                >
+
+                    <span>🔌</span>
+
+                    Sources
+
+                </a>
+
+                <a
+                    href="reports.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>📄</span>
+                    Reports
+                </a>
+
+                <a
+                    href="system-check.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🛡️</span>
+                    System Check
+                </a>
+
+                <a href="settings.html" class="menu-item" data-manage-only hidden>
+
+                    <span>⚙️</span>
+
+                    Settings
+
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-footer">
+
+                <a href="../index.html">
+
+                    ← Visit Website
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+            <!-- Top Header -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <p class="page-label">
+                        OVERVIEW
+                    </p>
+
+                    <h1>
+                        Lead Management Dashboard
+                    </h1>
+
+                </div>
+
+
+                <div class="admin-profile">
+
+                    <!-- FOLLOW-UP NOTIFICATIONS -->
+
+<div
+    class="notification-center"
+    id="notification-center"
+>
+
+    <button
+        type="button"
+        id="notification-btn"
+        class="notification-btn"
+        aria-label="Open follow-up notifications"
+        aria-expanded="false"
+    >
+
+        <span class="notification-bell">
+            🔔
+        </span>
+
+        <span
+            id="notification-badge"
+            class="notification-badge"
+            hidden
+        >
+            0
+        </span>
+
+    </button>
+
+
+    <section
+        id="notification-panel"
+        class="notification-panel"
+        aria-hidden="true"
+    >
+
+        <div class="notification-panel-header">
+
+            <div>
+
+                <p>
+                    FOLLOW-UP ALERTS
+                </p>
+
+                <h3>
+                    Notifications
+                </h3>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="notification-close-btn"
+                class="notification-close-btn"
+                aria-label="Close notifications"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="notification-summary">
+
+            <div>
+
+                <span>
+                    Overdue
+                </span>
+
+                <strong id="notification-overdue-count">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    Today
+                </span>
+
+                <strong id="notification-today-count">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+        <div
+    id="notification-action-message"
+    class="notification-action-message"
+    hidden
+    role="status"
+    aria-live="polite"
+></div>
+
+
+        <div
+            id="notification-loading"
+            class="notification-loading"
+        >
+            Loading follow-up alerts...
+        </div>
+
+
+        <div
+            id="notification-list"
+            class="notification-list"
+            hidden
+        ></div>
+
+
+        <div class="notification-panel-footer">
+
+            <button
+                type="button"
+                id="refresh-notifications-btn"
+                class="refresh-notifications-btn"
+            >
+                Refresh
+            </button>
+
+
+            <a
+                href="followups.html"
+                class="view-all-notifications-btn"
+            >
+                View All Follow-ups
+            </a>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+
+                    <button type="button" id="logout-btn" class="logout-btn">
+                     Logout
+                     </button>
+                <div class="profile-avatar"
+                    data-admin-initials
+                    data-current-user-initials>
+                    MM
+                </div>
+
+<div>
+
+    <strong data-admin-name data-current-user-name>
+        Mohan
+    </strong>
+
+    <p data-current-user-role>
+        Administrator
+    </p>
+
+</div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Statistics -->
+
+            <section class="dashboard-stats">
+
+                <article class="dashboard-stat-card">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total Leads
+                        </p>
+
+                        <h2 id="total-leads">
+                            0
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+                <article class="dashboard-stat-card">
+
+                    <div class="stat-icon">
+                        🆕
+                    </div>
+
+                    <div>
+
+                        <p>
+                            New Leads
+                        </p>
+
+                        <h2 id="new-leads">
+                            0
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+                <article class="dashboard-stat-card">
+
+                    <div class="stat-icon">
+                        📞
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Contacted
+                        </p>
+
+                        <h2 id="contacted-leads">
+                            0
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+                <article class="dashboard-stat-card">
+
+                    <div class="stat-icon">
+                        ✅
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Converted
+                        </p>
+
+                        <h2 id="converted-leads">
+                            0
+                        </h2>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- Leads Area -->
+
+            <section class="leads-section" id="leads-section">
+
+                <div class="section-topbar">
+
+                    <div>
+
+                        <h2>
+                            Recent Leads
+                        </h2>
+
+                        <p>
+                            View and manage website enquiries.
+                        </p>
+
+                    </div>
+
+
+                    <div class="lead-controls">
+
+                        <input
+                            type="search"
+                            id="lead-search"
+                            placeholder="Search leads..."
+                        >
+
+                        <select id="status-filter">
+
+                            <option value="all">
+                                All Status
+                            </option>
+
+                            <option value="new">
+                                New
+                            </option>
+
+                            <option value="contacted">
+                                Contacted
+                            </option>
+
+                            <option value="converted">
+                                Converted
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Name</th>
+
+                                <th>Contact</th>
+
+                                <th>Company</th>
+
+                                <th>Service</th>
+
+                                <th>Assigned To</th>
+
+                                <th>Status</th>
+
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="leads-table-body">
+
+                            <tr>
+
+                                <td colspan="7">
+                                    Loading leads...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+        <!-- Lead Details Modal -->
+
+<div
+    class="lead-modal"
+    id="lead-modal"
+    aria-hidden="true"
+>
+
+    <div
+        class="lead-modal-backdrop"
+        data-close-modal
+    ></div>
+
+    <section
+        class="lead-modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="lead-modal-title"
+    >
+
+        <div class="lead-modal-header">
+
+            <div>
+
+                <p class="modal-label">
+                    LEAD INFORMATION
+                </p>
+
+                <h2 id="lead-modal-title">
+                    Lead Details
+                </h2>
+
+            </div>
+
+            <button
+                type="button"
+                class="modal-close-btn"
+                id="modal-close-btn"
+                aria-label="Close lead details"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="lead-details-grid">
+
+            <div class="lead-detail">
+
+                <span>Name</span>
+
+                <strong id="modal-name">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="lead-detail">
+
+                <span>Email</span>
+
+                <a id="modal-email" href="#">
+                    -
+                </a>
+
+            </div>
+
+
+            <div class="lead-detail">
+
+                <span>Phone</span>
+
+                <a id="modal-phone" href="#">
+                    -
+                </a>
+
+            </div>
+
+
+            <div class="lead-detail">
+
+                <span>Company</span>
+
+                <strong id="modal-company">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="lead-detail">
+
+                <span>Service</span>
+
+                <strong id="modal-service">
+                    -
+                </strong>
+
+            </div>
+
+<div class="lead-detail">
+
+    <label for="modal-status-select">
+        Status
+    </label>
+
+    <select
+        id="modal-status-select"
+        class="modal-status-select"
+    >
+
+        <option value="new">
+            New
+        </option>
+
+        <option value="contacted">
+            Contacted
+        </option>
+
+        <option value="converted">
+            Converted
+        </option>
+
+    </select>
+
+</div>
+
+
+            <div class="lead-detail">
+
+                <span>Received On</span>
+
+                <strong id="modal-created-at">
+                    -
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="lead-message-box">
+
+            <span>Customer Message</span>
+
+            <p id="modal-message">
+                -
+            </p>
+
+        </div>
+        <div class="lead-management-fields">
+
+    <div class="management-field">
+
+        <label for="modal-follow-up">
+            Next Follow-up
+        </label>
+
+        <input
+            type="datetime-local"
+            id="modal-follow-up"
+        >
+
+    </div>
+
+
+    <div class="management-field">
+
+        <label for="modal-assigned-to">
+            Assigned To
+        </label>
+
+        <select id="modal-assigned-to">
+
+            <option value="">
+                Unassigned
+            </option>
+
+        </select>
+
+        <p
+            id="modal-assignment-help"
+            class="modal-assignment-help"
+        >
+            Assign this lead to a CRM team member.
+        </p>
+
+    </div>
+
+
+    <div class="management-field">
+
+        <label for="modal-notes">
+            Admin Notes
+        </label>
+
+        <textarea
+            id="modal-notes"
+            rows="5"
+            placeholder="Add call notes, customer requirements or next action..."
+        ></textarea>
+
+    </div>
+    <!-- LEAD ACTIVITY TIMELINE -->
+
+<section class="modal-activity-section">
+
+    <div class="modal-activity-header">
+
+        <div>
+
+            <p class="modal-activity-label">
+                LEAD HISTORY
+            </p>
+
+            <h3>
+                Activity Timeline
+            </h3>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="dashboard-refresh-activity-btn"
+            class="dashboard-refresh-activity-btn"
+        >
+            Refresh
+        </button>
+
+    </div>
+
+
+    <div
+        id="dashboard-activity-loading"
+        class="dashboard-activity-loading"
+    >
+        Select a lead to view activity.
+    </div>
+
+
+    <div
+        id="dashboard-activity-timeline"
+        class="dashboard-activity-timeline"
+        hidden
+    ></div>
+
+</section>
+
+</div>
+        <div class="modal-actions">
+
+    <p
+        id="status-save-message"
+        class="status-save-message"
+    ></p>
+
+    <button
+        type="button"
+        id="save-status-btn"
+        class="save-status-btn"
+    >
+        Save Changes
+    </button>
+
+</div>
+
+    </section>
+
+</div>
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="common.js"></script>
+<script src="security.js"></script>
+<script src="admin.js"></script>
+
+</body>
+
+</html>

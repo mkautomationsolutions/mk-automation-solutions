@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="robots" content="noindex,nofollow,noarchive">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        MK Automation Solutions | Admin Login
+    </title>
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="login.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <section class="login-card">
+
+            <div class="brand-badge">
+                MK
+            </div>
+
+            <p class="eyebrow">
+                ADMIN PORTAL
+            </p>
+
+            <h1>
+                Welcome Back
+            </h1>
+
+            <p class="login-description">
+                Sign in to manage leads, follow-ups and business enquiries.
+            </p>
+
+            <form id="login-form">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Admin email"
+                    required
+                >
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit">
+                    Sign In
+                </button>
+
+                <p
+                    id="login-status"
+                    class="login-status"
+                ></p>
+
+            </form>
+
+            <a
+                href="../index.html"
+                class="back-link"
+            >
+                ← Back to Website
+            </a>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+
+<script src="common.js"></script>
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

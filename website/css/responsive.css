@@ -1,0 +1,407 @@
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+
+/* TABLET */
+
+@media (max-width: 992px){
+
+    .container{
+
+        width:90%;
+
+    }
+
+
+    .hero-content{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:50px;
+
+    }
+
+
+    .hero-text h1{
+
+        font-size:52px;
+
+    }
+
+
+    .hero-text p{
+
+        max-width:700px;
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+
+    .buttons{
+
+        justify-content:center;
+
+    }
+
+
+    .trust-badges{
+
+        justify-content:center;
+
+    }
+
+
+    .hero-image{
+
+        width:100%;
+
+    }
+
+
+    .hero-placeholder{
+
+        width:100%;
+
+        max-width:520px;
+
+    }
+
+
+    .stats-container{
+
+        grid-template-columns:repeat(2, 1fr);
+
+    }
+
+
+    .footer-container{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width:600px){
+    .form-row{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+}
+
+
+.cta-content{
+
+    padding:50px 20px;
+
+}
+
+
+.cta-content h2{
+
+    font-size:34px;
+
+}
+
+
+.cta-content p{
+
+    font-size:16px;
+
+}
+    /* MOBILE HEADER */
+
+header{
+
+    top:10px;
+
+    padding:10px 0;
+
+}
+
+
+nav{
+
+    position:relative;
+
+    padding:15px 20px;
+
+}
+
+
+.logo{
+
+    font-size:20px;
+
+}
+
+
+nav ul{
+
+    display:none;
+
+    position:absolute;
+
+    top:70px;
+
+    left:0;
+
+    right:0;
+
+    flex-direction:column;
+
+    gap:0;
+
+    background:white;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+nav ul.active{
+
+    display:flex;
+
+}
+
+
+nav ul li a{
+
+    display:block;
+
+    padding:14px;
+
+}
+
+
+nav .btn{
+
+    display:none;
+
+}
+
+
+.menu-toggle{
+
+    display:block;
+
+    border:none;
+
+    background:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+    /* SERVICES */
+
+.services-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+/* SOLUTIONS */
+
+.solutions-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+/* PORTFOLIO */
+
+.portfolio-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+    .container{
+
+        width:calc(100% - 32px);
+
+        max-width:none;
+
+    }
+
+
+    .hero{
+
+        padding-top:60px;
+
+        padding-bottom:60px;
+
+    }
+
+
+    .hero-content{
+
+        gap:40px;
+
+    }
+
+
+    .hero-text h1{
+
+        font-size:38px;
+
+        line-height:1.15;
+
+        margin-bottom:20px;
+
+    }
+
+
+    .hero-text p{
+
+        font-size:16px;
+
+        line-height:1.7;
+
+        margin-bottom:30px;
+
+    }
+
+
+    .buttons{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:14px;
+
+    }
+
+
+    .buttons a,
+
+    .buttons button{
+
+        width:100%;
+
+        text-align:center;
+
+        box-sizing:border-box;
+
+    }
+
+
+    .trust-badges{
+
+        gap:10px;
+
+        justify-content:center;
+
+    }
+
+
+    .trust-badges span{
+
+        font-size:13px;
+
+        padding:8px 12px;
+
+    }
+
+
+    .hero-placeholder{
+
+        width:100%;
+
+        height:300px;
+
+        font-size:20px;
+
+    }
+
+
+    .stats{
+
+        padding:50px 0;
+
+    }
+
+
+    .stats-container{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+
+    .stat{
+
+        padding:30px 20px;
+
+    }
+
+
+    .stat h2{
+
+        font-size:36px;
+
+    }
+
+
+    .footer{
+
+        margin-top:60px;
+
+    }
+
+
+    .footer-container{
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+        padding-bottom:40px;
+
+    }
+
+
+    .footer-brand h2{
+
+        font-size:22px;
+
+    }
+
+
+    .footer-bottom{
+
+        padding:20px 15px;
+
+    }
+
+
+    .footer-bottom p{
+
+        font-size:13px;
+
+    }
+
+}

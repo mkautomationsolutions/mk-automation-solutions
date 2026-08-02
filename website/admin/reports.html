@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" class="crm-settings-loading crm-access-loading crm-data-loading">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <title>MK Automation Solutions | Reports & Backup</title>
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body data-crm-access="manage">
+<div class="dashboard-layout">
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-icon">MK</div>
+            <div>
+                <h2 data-business-name>MK Automation Solutions</h2>
+                <p>Admin CRM</p>
+            </div>
+        </div>
+
+        <nav class="sidebar-menu">
+            <a href="index.html" class="menu-item"><span>📊</span>Dashboard</a>
+            <a href="leads.html" class="menu-item"><span>👥</span>Leads</a>
+            <a href="followups.html" class="menu-item"><span>📅</span>Follow-ups</a>
+            <a href="analytics.html" class="menu-item"><span>📈</span>Analytics</a>
+            <a href="team.html" class="menu-item" data-manage-only hidden><span>🧑‍💼</span>Team</a>
+            <a href="source-rules.html" class="menu-item" data-manage-only hidden><span>🔌</span>Sources</a>
+            <a href="reports.html" class="menu-item active" data-manage-only hidden><span>📄</span>Reports</a>
+            <a
+                href="system-check.html"
+                class="menu-item"
+                data-manage-only
+                hidden
+            >
+                <span>🛡️</span>
+                System Check
+            </a>
+
+            <a href="settings.html" class="menu-item" data-manage-only hidden><span>⚙️</span>Settings</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="../index.html">← Visit Website</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="dashboard-header reports-header">
+            <div>
+                <p class="page-label">BUSINESS REPORTING</p>
+                <h1>Reports & Backup</h1>
+                <p class="reports-subtitle">Analyse filtered lead performance and download a secure CRM backup.</p>
+            </div>
+
+            <div class="reports-header-actions">
+                <button type="button" id="reports-refresh-btn" class="reports-secondary-btn">Refresh</button>
+                <button type="button" id="reports-print-btn" class="reports-secondary-btn">Print / Save PDF</button>
+                <button type="button" id="reports-export-btn" class="reports-primary-btn">Export CSV</button>
+                <button type="button" id="reports-backup-btn" class="reports-backup-btn">Download Backup</button>
+
+                <button type="button" id="logout-btn" class="logout-btn">Logout</button>
+                <div class="profile-avatar" data-admin-initials data-current-user-initials>MK</div>
+                <div class="reports-profile-copy">
+                    <strong data-admin-name data-current-user-name>Administrator</strong>
+                    <p data-current-user-role>Administrator</p>
+                </div>
+            </div>
+        </header>
+
+        <div id="reports-message" class="reports-message" hidden role="status" aria-live="polite"></div>
+
+        <section class="reports-filter-card">
+            <div class="reports-filter-heading">
+                <div>
+                    <h2>Report Filters</h2>
+                    <p>Filters update cards, charts, table and CSV export together.</p>
+                </div>
+                <button type="button" id="reports-reset-btn" class="reports-link-btn">Reset Filters</button>
+            </div>
+
+            <div class="reports-filter-grid">
+                <div>
+                    <label for="reports-date-preset">Date Range</label>
+                    <select id="reports-date-preset">
+                        <option value="all">All Time</option>
+                        <option value="7">Last 7 Days</option>
+                        <option value="30" selected>Last 30 Days</option>
+                        <option value="90">Last 90 Days</option>
+                        <option value="this-month">This Month</option>
+                        <option value="last-month">Last Month</option>
+                        <option value="custom">Custom Range</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="reports-from-date">From</label>
+                    <input type="date" id="reports-from-date" disabled>
+                </div>
+
+                <div>
+                    <label for="reports-to-date">To</label>
+                    <input type="date" id="reports-to-date" disabled>
+                </div>
+
+                <div>
+                    <label for="reports-source-filter">Source</label>
+                    <select id="reports-source-filter">
+                        <option value="all">All Sources</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="reports-service-filter">Service</label>
+                    <select id="reports-service-filter">
+                        <option value="all">All Services</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="reports-status-filter">Status</label>
+                    <select id="reports-status-filter">
+                        <option value="all">All Statuses</option>
+                        <option value="new">New</option>
+                        <option value="contacted">Contacted</option>
+                        <option value="converted">Converted</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="reports-assignee-filter">Assigned To</label>
+                    <select id="reports-assignee-filter">
+                        <option value="all">All Team Members</option>
+                        <option value="unassigned">Unassigned</option>
+                    </select>
+                </div>
+
+                <label class="reports-checkbox-field" for="reports-include-archived">
+                    <input type="checkbox" id="reports-include-archived">
+                    <span>Include archived leads</span>
+                </label>
+            </div>
+        </section>
+
+        <section class="reports-stats-grid">
+            <article class="reports-stat-card">
+                <div class="reports-stat-icon">👥</div>
+                <div><span>Total Leads</span><strong id="reports-total-count">0</strong></div>
+            </article>
+            <article class="reports-stat-card">
+                <div class="reports-stat-icon">✅</div>
+                <div><span>Converted</span><strong id="reports-converted-count">0</strong></div>
+            </article>
+            <article class="reports-stat-card">
+                <div class="reports-stat-icon">📊</div>
+                <div><span>Conversion Rate</span><strong id="reports-conversion-rate">0%</strong></div>
+            </article>
+            <article class="reports-stat-card">
+                <div class="reports-stat-icon">📞</div>
+                <div><span>Open Leads</span><strong id="reports-open-count">0</strong></div>
+            </article>
+            <article class="reports-stat-card">
+                <div class="reports-stat-icon">⏰</div>
+                <div><span>Overdue Follow-ups</span><strong id="reports-overdue-count">0</strong></div>
+            </article>
+            <article class="reports-stat-card">
+                <div class="reports-stat-icon">🔥</div>
+                <div><span>High Priority</span><strong id="reports-high-priority-count">0</strong></div>
+            </article>
+        </section>
+
+        <section class="reports-chart-grid">
+            <article class="reports-chart-card">
+                <div class="reports-card-heading"><h2>Leads by Source</h2><p>Which channels are generating enquiries.</p></div>
+                <div class="reports-chart-container"><canvas id="reports-source-chart"></canvas></div>
+            </article>
+            <article class="reports-chart-card">
+                <div class="reports-card-heading"><h2>Leads by Service</h2><p>Most requested AI automation services.</p></div>
+                <div class="reports-chart-container"><canvas id="reports-service-chart"></canvas></div>
+            </article>
+            <article class="reports-chart-card">
+                <div class="reports-card-heading"><h2>Status Breakdown</h2><p>Current movement across the sales pipeline.</p></div>
+                <div class="reports-chart-container"><canvas id="reports-status-chart"></canvas></div>
+            </article>
+            <article class="reports-chart-card">
+                <div class="reports-card-heading"><h2>Team Workload</h2><p>Filtered lead distribution by assignee.</p></div>
+                <div class="reports-chart-container"><canvas id="reports-assignee-chart"></canvas></div>
+            </article>
+            <article class="reports-chart-card reports-chart-wide">
+                <div class="reports-card-heading"><h2>Lead Trend</h2><p>Monthly lead volume for the selected report range.</p></div>
+                <div class="reports-chart-container reports-chart-container-wide"><canvas id="reports-trend-chart"></canvas></div>
+            </article>
+        </section>
+
+        <section class="reports-table-card">
+            <div class="reports-table-heading">
+                <div><h2>Filtered Lead Report</h2><p id="reports-table-summary">0 leads in this report.</p></div>
+                <span id="reports-generated-at">Generated just now</span>
+            </div>
+
+            <div id="reports-empty" class="reports-empty" hidden>No leads match the selected filters.</div>
+
+            <div id="reports-table-wrapper" class="reports-table-wrapper">
+                <table class="reports-table">
+                    <thead>
+                        <tr>
+                            <th>Lead</th>
+                            <th>Contact</th>
+                            <th>Service</th>
+                            <th>Source</th>
+                            <th>Status</th>
+                            <th>Priority</th>
+                            <th>Assigned To</th>
+                            <th>Created</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reports-table-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="config.js"></script>
+<script src="common.js"></script>
+<script src="security.js"></script>
+<script src="reports.js"></script>
+</body>
+</html>
