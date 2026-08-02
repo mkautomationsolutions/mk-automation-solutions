@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" class="crm-settings-loading crm-access-loading crm-data-loading">
+
+<head>
+    <meta name="robots" content="noindex,nofollow,noarchive">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        MK Automation Solutions | Analytics
+    </title>
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="analytics.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <div class="brand-icon">
+                    MK
+                </div>
+
+                <div>
+<h2 data-business-name>
+    MK Automation Solutions
+</h2>
+
+                    <p>
+                        Admin CRM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a
+                    href="index.html"
+                    class="menu-item"
+                >
+                    <span>📊</span>
+                    Dashboard
+                </a>
+
+
+              <a
+    href="leads.html"
+    class="menu-item"
+
+                >
+                    <span>👥</span>
+                    Leads
+                </a>
+
+
+                <a
+                    href="followups.html"
+                    class="menu-item"
+                >
+                    <span>📅</span>
+                    Follow-ups
+                </a>
+
+
+                <a
+                    href="analytics.html"
+                    class="menu-item active"
+                >
+                    <span>📈</span>
+                    Analytics
+                </a>
+
+                <a
+                    href="team.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🧑‍💼</span>
+                    Team
+                </a>
+
+
+
+                <a
+
+                    href="source-rules.html"
+
+                    class="menu-item"
+
+                    data-manage-only
+
+                    hidden
+
+                >
+
+                    <span>🔌</span>
+
+                    Sources
+
+                </a>
+
+                <a
+                    href="reports.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>📄</span>
+                    Reports
+                </a>
+
+
+                <a
+                    href="system-check.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🛡️</span>
+                    System Check
+                </a>
+
+                <a
+                    href="settings.html"
+                    class="menu-item"
+                 data-manage-only hidden>
+                    <span>⚙️</span>
+                    Settings
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-footer">
+
+                <a href="../index.html">
+                    ← Visit Website
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <p class="page-label">
+                        BUSINESS INSIGHTS
+                    </p>
+
+                    <h1>
+                        Lead Analytics
+                    </h1>
+
+                </div>
+
+
+                <div class="admin-profile">
+
+                    <button
+                        type="button"
+                        id="logout-btn"
+                        class="logout-btn"
+                    >
+                        Logout
+                    </button>
+<div
+    class="profile-avatar"
+    data-admin-initials
+                    data-current-user-initials
+>
+    MM
+</div>
+
+                    <div>
+<strong data-admin-name data-current-user-name>
+    Mohan
+</strong>
+                        <p data-current-user-role>
+                            Administrator
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Analytics Statistics -->
+
+            <section class="analytics-stats">
+
+                <article class="analytics-stat-card">
+
+                    <div class="analytics-stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total Leads
+                        </p>
+
+                        <h2 id="analytics-total-leads">
+                            0
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+                <article class="analytics-stat-card">
+
+                    <div class="analytics-stat-icon">
+                        ✅
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Converted Leads
+                        </p>
+
+                        <h2 id="analytics-converted-leads">
+                            0
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+                <article class="analytics-stat-card">
+
+                    <div class="analytics-stat-icon">
+                        📈
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Conversion Rate
+                        </p>
+
+                        <h2 id="analytics-conversion-rate">
+                            0%
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+                <article class="analytics-stat-card">
+
+                    <div class="analytics-stat-icon">
+                        📅
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Scheduled Follow-ups
+                        </p>
+
+                        <h2 id="analytics-followups">
+                            0
+                        </h2>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- Charts -->
+
+            <section class="analytics-grid">
+
+                <article class="chart-card">
+
+                    <div class="chart-card-header">
+
+                        <div>
+
+                            <h2>
+                                Leads by Status
+                            </h2>
+
+                            <p>
+                                Current sales pipeline distribution.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="chart-container chart-container-small">
+
+                        <canvas id="status-chart"></canvas>
+
+                    </div>
+
+                </article>
+
+
+                <article class="chart-card">
+
+                    <div class="chart-card-header">
+
+                        <div>
+
+                            <h2>
+                                Leads by Service
+                            </h2>
+
+                            <p>
+                                Most requested automation services.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="chart-container chart-container-small">
+
+                        <canvas id="service-chart"></canvas>
+
+                    </div>
+
+                </article>
+
+
+                <article class="chart-card chart-card-wide">
+
+                    <div class="chart-card-header">
+
+                        <div>
+
+                            <h2>
+                                Leads Received — Last 7 Days
+                            </h2>
+
+                            <p>
+                                Daily website enquiry trend.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="chart-container chart-container-wide">
+
+                        <canvas id="trend-chart"></canvas>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <p
+                id="analytics-message"
+                class="analytics-message"
+            >
+                Loading analytics...
+            </p>
+
+        </main>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="config.js"></script>
+
+<script src="common.js"></script>
+<script src="security.js"></script>
+
+    <script src="analytics.js"></script>
+
+</body>
+
+</html>

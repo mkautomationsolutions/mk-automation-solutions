@@ -1,0 +1,12 @@
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.btn,
+.primary-btn,
+.secondary-btn,
+nav ul li a,
+.stat,
+.trust-badges span {
+    transition: var(--transition);
+}

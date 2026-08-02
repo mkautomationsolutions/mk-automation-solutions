@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="crm-settings-loading crm-access-loading crm-data-loading">
+
+<head>
+    <meta name="robots" content="noindex,nofollow,noarchive">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        MK Automation Solutions | CRM Settings
+    </title>
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="admin.css">
+
+    <link rel="stylesheet" href="settings.css">
+
+</head>
+
+<body data-crm-access="manage">
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <div class="brand-icon">
+                    MK
+                </div>
+
+                <div>
+
+                    <h2 data-business-name>
+    MK Automation Solutions
+</h2>
+
+                    <p>Admin CRM</p>
+
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a href="index.html" class="menu-item">
+                    <span>📊</span>
+                    Dashboard
+                </a>
+<a
+    href="leads.html"
+    class="menu-item"
+
+                >
+                    <span>👥</span>
+                    Leads
+                </a>
+
+                <a
+                    href="followups.html"
+                    class="menu-item"
+                >
+                    <span>📅</span>
+                    Follow-ups
+                </a>
+
+                <a
+                    href="analytics.html"
+                    class="menu-item"
+                >
+                    <span>📈</span>
+                    Analytics
+                </a>
+
+                <a
+                    href="team.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🧑‍💼</span>
+                    Team
+                </a>
+
+
+                <a
+
+                    href="source-rules.html"
+
+                    class="menu-item"
+
+                    data-manage-only
+
+                    hidden
+
+                >
+
+                    <span>🔌</span>
+
+                    Sources
+
+                </a>
+
+                <a
+                    href="reports.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>📄</span>
+                    Reports
+                </a>
+
+
+                <a
+                    href="system-check.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🛡️</span>
+                    System Check
+                </a>
+
+                <a
+                    href="settings.html"
+                    class="menu-item active"
+                 data-manage-only hidden>
+                    <span>⚙️</span>
+                    Settings
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-footer">
+
+                <a href="../index.html">
+                    ← Visit Website
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <p class="page-label">
+                        CRM CONFIGURATION
+                    </p>
+
+                    <h1>
+                        Business Settings
+                    </h1>
+
+                </div>
+
+
+                <div class="admin-profile">
+
+                    <button
+                        type="button"
+                        id="logout-btn"
+                        class="logout-btn"
+                    >
+                        Logout
+                    </button>
+<div
+    class="profile-avatar"
+    data-admin-initials
+                    data-current-user-initials
+>
+    MM
+</div>
+
+                    <div>
+<strong
+    id="header-admin-name"
+    data-admin-name data-current-user-name
+>
+    Mohan
+</strong>
+                        <p data-current-user-role>Administrator</p>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <section class="settings-layout">
+
+                <article class="settings-card">
+
+                    <div class="settings-card-header">
+
+                        <div class="settings-icon">
+                            ⚙️
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                General Settings
+                            </h2>
+
+                            <p>
+                                Configure your CRM business information
+                                and follow-up preferences.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="settings-form">
+
+                        <div class="settings-grid">
+
+                            <div class="settings-field">
+
+                                <label for="business-name">
+                                    Business Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="business-name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="settings-field">
+
+                                <label for="admin-name">
+                                    Admin Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="admin-name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="settings-field">
+
+                                <label for="admin-email">
+                                    Admin Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="admin-email"
+                                    required
+                                >
+
+                                <small>
+                                    This is a CRM setting and does not
+                                    change your Supabase login email.
+                                </small>
+
+                            </div>
+
+
+                            <div class="settings-field">
+
+                                <label for="timezone">
+                                    Time Zone
+                                </label>
+
+                                <select id="timezone" required>
+
+                                    <option value="Asia/Kolkata">
+                                        Asia/Kolkata — India
+                                    </option>
+
+                                    <option value="UTC">
+                                        UTC
+                                    </option>
+
+                                    <option value="Asia/Dubai">
+                                        Asia/Dubai
+                                    </option>
+
+                                    <option value="Europe/London">
+                                        Europe/London
+                                    </option>
+
+                                    <option value="America/New_York">
+                                        America/New York
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="settings-field">
+
+                                <label for="default-followup-days">
+                                    Default Follow-up Days
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="default-followup-days"
+                                    min="0"
+                                    max="365"
+                                    required
+                                >
+
+                                <small>
+                                    Recommended default delay before
+                                    the next customer follow-up.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-actions">
+
+                            <p
+                                id="settings-message"
+                                class="settings-message"
+                            ></p>
+
+                            <button
+                                type="submit"
+                                id="save-settings-btn"
+                                class="save-settings-btn"
+                            >
+                                Save Settings
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </article>
+
+
+                <aside class="settings-summary-card">
+
+                    <p class="summary-label">
+                        CURRENT CONFIGURATION
+                    </p>
+
+                    <h2 id="summary-business-name">
+                        MK Automation Solutions
+                    </h2>
+
+                    <div class="summary-item">
+
+                        <span>Administrator</span>
+
+                        <strong id="summary-admin-name">
+                            Mohan
+                        </strong>
+
+                    </div>
+
+                    <div class="summary-item">
+
+                        <span>Time Zone</span>
+
+                        <strong id="summary-timezone">
+                            Asia/Kolkata
+                        </strong>
+
+                    </div>
+
+                    <div class="summary-item">
+
+                        <span>Default Follow-up</span>
+
+                        <strong id="summary-followup-days">
+                            2 days
+                        </strong>
+
+                    </div>
+
+                    <div class="summary-item">
+
+                        <span>Last Updated</span>
+
+                        <strong id="summary-updated-at">
+                            -
+                        </strong>
+
+                    </div>
+
+                </aside>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+
+<script src="common.js"></script>
+<script src="security.js"></script>
+
+    <script src="settings.js"></script>
+
+</body>
+
+</html>

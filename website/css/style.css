@@ -1,0 +1,19 @@
+html{
+
+    scroll-behavior:smooth;
+
+}
+section{
+
+    scroll-margin-top:120px;
+
+}
+
+
+
+@import url("variables.css");
+@import url("header.css");
+@import url("hero.css");
+@import url("buttons.css");
+@import url("animations.css");
+@import url("responsive.css");

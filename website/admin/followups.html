@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" class="crm-settings-loading crm-access-loading crm-data-loading">
+
+<head>
+    <meta name="robots" content="noindex,nofollow,noarchive">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        MK Automation Solutions | Follow-ups
+    </title>
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="admin.css">
+
+    <link rel="stylesheet" href="followups.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <div class="brand-icon">
+                    MK
+                </div>
+
+                <div>
+
+                    <h2 data-business-name>
+    MK Automation Solutions
+</h2>
+
+
+                    <p>Admin CRM</p>
+
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a
+                    href="index.html"
+                    class="menu-item"
+                >
+                    <span>📊</span>
+                    Dashboard
+                </a>
+
+
+                <a
+            
+    href="leads.html"
+    class="menu-item"
+
+                >
+                    <span>👥</span>
+                    Leads
+                </a>
+
+
+                <a
+                    href="followups.html"
+                    class="menu-item active"
+                >
+                    <span>📅</span>
+                    Follow-ups
+                </a>
+
+
+                <a href="analytics.html" class="menu-item">
+                    <span>📈</span>
+                    Analytics
+                </a>
+
+                <a
+                    href="team.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🧑‍💼</span>
+                    Team
+                </a>
+
+
+
+                <a
+
+                    href="source-rules.html"
+
+                    class="menu-item"
+
+                    data-manage-only
+
+                    hidden
+
+                >
+
+                    <span>🔌</span>
+
+                    Sources
+
+                </a>
+
+                <a
+                    href="reports.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>📄</span>
+                    Reports
+                </a>
+
+                <a
+                    href="system-check.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🛡️</span>
+                    System Check
+                </a>
+
+                <a href="settings.html" class="menu-item" data-manage-only hidden>
+                    <span>⚙️</span>
+                    Settings
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-footer">
+
+                <a href="../index.html">
+                    ← Visit Website
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <main class="main-content">
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <p class="page-label">
+                        FOLLOW-UP MANAGEMENT
+                    </p>
+
+                    <h1>
+                        Customer Follow-ups
+                    </h1>
+
+                </div>
+
+
+                <div class="admin-profile">
+
+                    <button
+                        type="button"
+                        id="logout-btn"
+                        class="logout-btn"
+                    >
+                        Logout
+                    </button>
+<div
+    class="profile-avatar"
+    data-admin-initials
+                    data-current-user-initials
+>
+    MM
+</div>
+
+                    <div>
+
+                      <strong data-admin-name data-current-user-name>
+    Mohan
+</strong>
+
+                        <p data-current-user-role>Administrator</p>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <section class="followup-stats">
+
+                <article class="followup-stat-card">
+
+                    <span class="followup-stat-icon">
+                        📅
+                    </span>
+
+                    <div>
+
+                        <p>Total Scheduled</p>
+
+                        <h2 id="total-followups">
+                            0
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+                <article class="followup-stat-card overdue-card">
+
+                    <span class="followup-stat-icon">
+                        ⚠️
+                    </span>
+
+                    <div>
+
+                        <p>Overdue</p>
+
+                        <h2 id="overdue-followups">
+                            0
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+                <article class="followup-stat-card today-card">
+
+                    <span class="followup-stat-icon">
+                        📞
+                    </span>
+
+                    <div>
+
+                        <p>Today</p>
+
+                        <h2 id="today-followups">
+                            0
+                        </h2>
+
+                    </div>
+
+                </article>
+
+
+                <article class="followup-stat-card upcoming-card">
+
+                    <span class="followup-stat-icon">
+                        ⏰
+                    </span>
+
+                    <div>
+
+                        <p>Upcoming</p>
+
+                        <h2 id="upcoming-followups">
+                            0
+                        </h2>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <section class="followups-section">
+
+                <div class="section-topbar">
+                    <p
+    id="followup-action-message"
+    class="followup-action-message"
+></p>
+
+                    <div>
+
+                        <h2>
+                            Scheduled Follow-ups
+                        </h2>
+
+                        <p>
+                            Track overdue, today and upcoming customer calls.
+                        </p>
+
+                    </div>
+
+
+                    <div class="followup-controls">
+
+                        <input
+                            type="search"
+                            id="followup-search"
+                            placeholder="Search customer..."
+                        >
+
+
+                        <select id="time-filter">
+
+                            <option value="all">
+                                All Follow-ups
+                            </option>
+
+                            <option value="overdue">
+                                Overdue
+                            </option>
+
+                            <option value="today">
+                                Today
+                            </option>
+
+                            <option value="upcoming">
+                                Upcoming
+                            </option>
+
+                        </select>
+
+
+                        <select id="followup-status-filter">
+
+                            <option value="all">
+                                All Status
+                            </option>
+
+                            <option value="new">
+                                New
+                            </option>
+
+                            <option value="contacted">
+                                Contacted
+                            </option>
+
+                            <option value="converted">
+                                Converted
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Customer</th>
+
+                                <th>Contact</th>
+
+                                <th>Company</th>
+
+                                <th>Follow-up</th>
+
+                                <th>Timing</th>
+
+                                <th>Status</th>
+
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="followups-table-body">
+
+                            <tr>
+
+                                <td colspan="7">
+                                    Loading follow-ups...
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+    <!-- Reschedule Follow-up Modal -->
+
+<div
+    class="reschedule-modal"
+    id="reschedule-modal"
+    aria-hidden="true"
+>
+
+    <div
+        class="reschedule-backdrop"
+        data-close-reschedule
+    ></div>
+
+    <section class="reschedule-panel">
+
+        <div class="reschedule-header">
+
+            <div>
+
+                <p class="modal-label">
+                    FOLLOW-UP
+                </p>
+
+                <h2>
+                    Reschedule Customer
+                </h2>
+
+            </div>
+
+            <button
+                type="button"
+                id="reschedule-close-btn"
+                class="modal-close-btn"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="reschedule-content">
+
+            <label for="reschedule-date">
+                New Follow-up Date & Time
+            </label>
+
+            <input
+                type="datetime-local"
+                id="reschedule-date"
+            >
+
+            <p
+                id="reschedule-message"
+                class="reschedule-message"
+            ></p>
+
+        </div>
+
+
+        <div class="reschedule-actions">
+
+            <button
+                type="button"
+                id="cancel-reschedule-btn"
+                class="cancel-reschedule-btn"
+            >
+                Cancel
+            </button>
+
+            <button
+                type="button"
+                id="save-reschedule-btn"
+                class="save-status-btn"
+            >
+                Save New Date
+            </button>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+
+<script src="common.js"></script>
+<script src="security.js"></script>
+
+    <script src="followups.js"></script>
+
+</body>
+
+</html>

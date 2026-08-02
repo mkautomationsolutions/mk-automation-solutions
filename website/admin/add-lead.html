@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en" class="crm-settings-loading crm-access-loading crm-data-loading">
+
+<head>
+    <meta name="robots" content="noindex,nofollow,noarchive">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        MK Automation Solutions | Add Lead
+    </title>
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="add-lead.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <div class="brand-icon">
+                    MK
+                </div>
+
+                <div>
+
+                    <h2 data-business-name>
+                        MK Automation Solutions
+                    </h2>
+
+                    <p>
+                        Admin CRM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a
+                    href="index.html"
+                    class="menu-item"
+                >
+                    <span>📊</span>
+                    Dashboard
+                </a>
+
+
+                <a
+                    href="leads.html"
+                    class="menu-item active"
+                >
+                    <span>👥</span>
+                    Leads
+                </a>
+
+
+                <a
+                    href="followups.html"
+                    class="menu-item"
+                >
+                    <span>📅</span>
+                    Follow-ups
+                </a>
+
+
+                <a
+                    href="analytics.html"
+                    class="menu-item"
+                >
+                    <span>📈</span>
+                    Analytics
+                </a>
+
+                <a
+                    href="team.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🧑‍💼</span>
+                    Team
+                </a>
+
+
+
+                <a
+
+                    href="source-rules.html"
+
+                    class="menu-item"
+
+                    data-manage-only
+
+                    hidden
+
+                >
+
+                    <span>🔌</span>
+
+                    Sources
+
+                </a>
+
+                <a
+                    href="reports.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>📄</span>
+                    Reports
+                </a>
+
+
+                <a
+                    href="system-check.html"
+                    class="menu-item"
+                    data-manage-only
+                    hidden
+                >
+                    <span>🛡️</span>
+                    System Check
+                </a>
+
+                <a
+                    href="settings.html"
+                    class="menu-item"
+                 data-manage-only hidden>
+                    <span>⚙️</span>
+                    Settings
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-footer">
+
+                <a href="../index.html">
+                    ← Visit Website
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <header class="dashboard-header">
+
+                <div>
+
+                    <p class="page-label">
+                        LEAD MANAGEMENT
+                    </p>
+
+                    <h1>
+                        Add New Lead
+                    </h1>
+
+                </div>
+
+
+                <div class="admin-profile">
+
+                    <button
+                        type="button"
+                        id="logout-btn"
+                        class="logout-btn"
+                    >
+                        Logout
+                    </button>
+
+
+                    <div
+                        class="profile-avatar"
+                        data-admin-initials
+                    data-current-user-initials
+                    >
+                        MM
+                    </div>
+
+
+                    <div>
+
+                        <strong data-admin-name data-current-user-name>
+                            Mohan
+                        </strong>
+
+                        <p data-current-user-role>
+                            Administrator
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ADD LEAD SECTION -->
+
+            <section class="add-lead-section">
+
+                <div class="add-lead-header">
+
+                    <div>
+
+                        <h2>
+                            Customer Information
+                        </h2>
+
+                        <p>
+                            Add leads received from calls, referrals,
+                            social media, referrals, freelance platforms or direct outreach.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="leads.html"
+                        class="back-to-leads-btn"
+                    >
+                        ← Back to Leads
+                    </a>
+
+                </div>
+
+
+                <form
+                    id="add-lead-form"
+                    class="add-lead-form"
+                    novalidate
+                >
+
+                    <!-- BASIC DETAILS -->
+
+                    <div class="form-section">
+
+                        <div class="form-section-heading">
+
+                            <span>1</span>
+
+                            <div>
+
+                                <h3>
+                                    Basic Details
+                                </h3>
+
+                                <p>
+                                    Enter the customer contact information.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="lead-name">
+                                    Customer Name
+                                    <span>*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="lead-name"
+                                    name="name"
+                                    placeholder="Enter customer name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="lead-email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="lead-email"
+                                    name="email"
+                                    placeholder="customer@example.com"
+                                    autocomplete="email"
+                                >
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="lead-phone">
+                                    Phone Number
+                                    <span>*</span>
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="lead-phone"
+                                    name="phone"
+                                    placeholder="Enter mobile number"
+                                    autocomplete="tel"
+                                    required
+                                >
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="lead-company">
+                                    Company
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="lead-company"
+                                    name="company"
+                                    placeholder="Enter company name"
+                                >
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LEAD DETAILS -->
+
+                    <div class="form-section">
+
+                        <div class="form-section-heading">
+
+                            <span>2</span>
+
+                            <div>
+
+                                <h3>
+                                    Lead Details
+                                </h3>
+
+                                <p>
+                                    Select the required service, source and priority.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="lead-service">
+                                    Service Required
+                                    <span>*</span>
+                                </label>
+
+                                <select
+                                    id="lead-service"
+                                    name="service"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select service
+                                    </option>
+
+                                    <option value="ai-automation">
+                                        AI Automation
+                                    </option>
+
+                                    <option value="ai-agents">
+                                        AI Agents
+                                    </option>
+
+                                    <option value="workflow-automation">
+                                        Workflow Automation (n8n / Make / Zapier)
+                                    </option>
+
+                                    <option value="business-automation">
+                                        Business Process Automation
+                                    </option>
+
+                                    <option value="whatsapp-automation">
+                                        WhatsApp Automation
+                                    </option>
+
+                                    <option value="chatbot-development">
+                                        AI Chatbot Development
+                                    </option>
+
+                                    <option value="crm-development">
+                                        CRM & Lead Management Systems
+                                    </option>
+
+                                    <option value="api-integration">
+                                        API Integration
+                                    </option>
+
+                                    <option value="custom-ai-solutions">
+                                        Custom AI Solutions
+                                    </option>
+
+                                    <option value="website-development">
+                                        Website Development
+                                    </option>
+
+                                    <option value="api">
+                                        External API
+                                    </option>
+
+                                    <option value="other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="lead-source">
+                                    Lead Source
+                                    <span>*</span>
+                                </label>
+
+                                <select
+                                    id="lead-source"
+                                    name="lead_source"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select lead source
+                                    </option>
+
+                                    <option value="website">
+                                        Website
+                                    </option>
+
+                                    <option value="facebook">
+                                        Facebook
+                                    </option>
+
+                                    <option value="instagram">
+                                        Instagram
+                                    </option>
+
+                                    <option value="whatsapp">
+                                        WhatsApp
+                                    </option>
+
+                                    <option value="linkedin">
+                                        LinkedIn
+                                    </option>
+
+                                    <option value="google-ads">
+                                        Google Ads
+                                    </option>
+
+                                    <option value="referral">
+                                        Referral
+                                    </option>
+
+                                    <option value="existing-customer">
+                                        Existing Customer
+                                    </option>
+
+                                    <option value="upwork">
+                                        Upwork / Freelance Platform
+                                    </option>
+
+                                    <option value="direct-outreach">
+                                        Direct Outreach
+                                    </option>
+
+                                    <option value="employee">
+                                        Employee
+                                    </option>
+
+                                    <option value="phone-call">
+                                        Phone Call
+                                    </option>
+
+                                    <option value="other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="lead-priority">
+                                    Priority
+                                    <span>*</span>
+                                </label>
+
+                                <select
+                                    id="lead-priority"
+                                    name="priority"
+                                    required
+                                >
+
+                                    <option value="low">
+                                        Low
+                                    </option>
+
+                                    <option
+                                        value="medium"
+                                        selected
+                                    >
+                                        Medium
+                                    </option>
+
+                                    <option value="high">
+                                        High
+                                    </option>
+
+                                </select>
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="lead-assigned-to">
+                                    Assigned To
+                                </label>
+
+                                <select
+                                    id="lead-assigned-to"
+                                    name="assigned_to"
+                                >
+
+                                    <option value="">
+                                        Unassigned
+                                    </option>
+
+                                </select>
+
+                                <p
+                                    id="add-assignment-field-help"
+                                    class="lead-field-help"
+                                >
+                                    Assign this lead to an active CRM team member.
+                                </p>
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="lead-status">
+                                    Status
+                                </label>
+
+                                <select
+                                    id="lead-status"
+                                    name="status"
+                                >
+
+                                    <option
+                                        value="new"
+                                        selected
+                                    >
+                                        New
+                                    </option>
+
+                                    <option value="contacted">
+                                        Contacted
+                                    </option>
+
+                                    <option value="converted">
+                                        Converted
+                                    </option>
+
+                                </select>
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FOLLOW-UP -->
+
+                    <div class="form-section">
+
+                        <div class="form-section-heading">
+
+                            <span>3</span>
+
+                            <div>
+
+                                <h3>
+                                    Follow-up Information
+                                </h3>
+
+                                <p>
+                                    Schedule the next customer interaction.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+
+                                <label for="lead-follow-up">
+                                    Follow-up Date & Time
+                                </label>
+
+                                <input
+                                    type="datetime-local"
+                                    id="lead-follow-up"
+                                    name="follow_up_at"
+                                >
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+
+                            <div class="form-group form-group-full">
+
+                                <label for="lead-message">
+                                    Customer Requirement
+                                </label>
+
+                                <textarea
+                                    id="lead-message"
+                                    name="message"
+                                    rows="4"
+                                    placeholder="Enter the customer's requirement..."
+                                ></textarea>
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+
+                            <div class="form-group form-group-full">
+
+                                <label for="lead-notes">
+                                    Internal Notes
+                                </label>
+
+                                <textarea
+                                    id="lead-notes"
+                                    name="notes"
+                                    rows="4"
+                                    placeholder="Add internal notes for the sales team..."
+                                ></textarea>
+
+                                <small class="field-error"></small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FORM MESSAGE -->
+
+                    <div
+                        id="add-lead-message"
+                        class="add-lead-message"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <!-- FORM ACTIONS -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="reset"
+                            id="reset-lead-form-btn"
+                            class="reset-form-btn"
+                        >
+                            Clear Form
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            id="save-lead-btn"
+                            class="save-lead-btn"
+                        >
+                            Save Lead
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- SCRIPTS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="config.js"></script>
+
+    <script src="common.js"></script>
+<script src="security.js"></script>
+
+    <script src="add-lead.js"></script>
+
+</body>
+
+</html>

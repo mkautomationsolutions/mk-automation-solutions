@@ -1,0 +1,45 @@
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    background:#ffffff;
+    border-bottom:1px solid #e5e7eb;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:var(--primary);
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+    margin:0;
+    padding:0;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:var(--primary);
+}
+.menu-toggle{
+
+    display:none;
+
+}
