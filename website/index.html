@@ -30,6 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/production.css">
     <link rel="stylesheet" href="css/site-polish.css">
+    <link rel="stylesheet" href="css/product-studio.css">
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -53,7 +54,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#ai-tools">AI Tools</a></li>
+                    <li><a href="#ai-tools">Products</a></li>
                     <li><a href="#process">Process</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -297,76 +298,28 @@
         </section>
 
 
-        <section class="section ai-tools" id="ai-tools">
-            <div class="container">
-                <div class="ai-tools-heading" data-reveal>
-                    <div>
-                        <span class="platform-pill">AI Tools Platform — in development</span>
-                        <h2>One secure workspace for practical AI tools.</h2>
-                    </div>
-                    <p>The planned customer app will use one account and one login. Each business will see only the tools enabled for its plan, while its contacts, messages and usage remain inside its own workspace.</p>
-                </div>
-
-                <div class="platform-architecture" aria-label="Planned AI tools platform architecture">
-                    <article data-reveal><span>01</span><h3>One account</h3><p>A single customer login instead of separate passwords for every tool.</p></article>
-                    <article data-reveal><span>02</span><h3>Private workspace</h3><p>Organisation-level access and separate customer data.</p></article>
-                    <article data-reveal><span>03</span><h3>Enabled tools</h3><p>Tools appear based on the selected plan and permissions.</p></article>
-                    <article data-reveal><span>04</span><h3>Usage history</h3><p>Actions, messages and results stay traceable inside the app.</p></article>
-                </div>
-
-                <div class="ai-tool-grid">
-                    <article class="ai-tool-card" data-reveal>
-                        <span class="ai-tool-status">Phase 1</span>
-                        <div class="ai-tool-icon">REV</div>
-                        <h3>AI Review Reply Assistant</h3>
-                        <p>Generate brand-aware replies for positive, neutral and negative customer reviews in the selected tone and language.</p>
-                    </article>
-                    <article class="ai-tool-card" data-reveal>
-                        <span class="ai-tool-status">Phase 1</span>
-                        <div class="ai-tool-icon">WA</div>
-                        <h3>WhatsApp Lead Follow-up</h3>
-                        <p>Manage opted-in leads, approved templates, personalised follow-ups, replies and human hand-off from one dashboard.</p>
-                    </article>
-                    <article class="ai-tool-card" data-reveal>
-                        <span class="ai-tool-status planned">Planned</span>
-                        <div class="ai-tool-icon">BOT</div>
-                        <h3>Website AI Chatbot</h3>
-                        <p>Answer common questions, capture enquiries and transfer qualified conversations to the team.</p>
-                    </article>
-                    <article class="ai-tool-card" data-reveal>
-                        <span class="ai-tool-status planned">Planned</span>
-                        <div class="ai-tool-icon">LQ</div>
-                        <h3>Lead Qualification Agent</h3>
-                        <p>Structure incoming requirements, score readiness and route promising opportunities for follow-up.</p>
-                    </article>
-                    <article class="ai-tool-card" data-reveal>
-                        <span class="ai-tool-status planned">Planned</span>
-                        <div class="ai-tool-icon">MAIL</div>
-                        <h3>Email Follow-up Assistant</h3>
-                        <p>Draft consistent follow-up emails using lead context, stage, tone and next-action requirements.</p>
-                    </article>
-                    <article class="ai-tool-card" data-reveal>
-                        <span class="ai-tool-status planned">Planned</span>
-                        <div class="ai-tool-icon">POST</div>
-                        <h3>Social Content Assistant</h3>
-                        <p>Create reusable content ideas and platform-ready drafts while keeping the brand voice consistent.</p>
-                    </article>
-                </div>
-
-                <div class="ai-tools-cta" data-reveal>
-                    <div>
-                        <strong>Planned customer app: <span class="app-address">app.mkautomationsolutions.com</span></strong>
-                        <p>The app will be developed as a separate SaaS application so customer data and the internal MK CRM remain safely separated.</p>
-                    </div>
-                    <div class="ai-tools-actions">
-                        <a href="#contact" class="button" data-prefill-service="ai-tools-platform" data-prefill-message="I am interested in early access to the AI Tools Platform, especially the AI Review Reply and WhatsApp Lead Follow-up tools.">Join early access</a>
-                        <a href="#contact" class="button button-ghost-dark" data-prefill-service="whatsapp-automation" data-prefill-message="I would like to discuss the WhatsApp Lead Follow-up tool and its dashboard workflow.">Discuss WhatsApp tool</a>
-                    </div>
-                </div>
-                <p class="release-note">The platform is currently in planning and development. Features, pricing and release timing will be confirmed before launch.</p>
+        <section class="section product-studio" id="ai-tools" aria-labelledby="products-title">
+          <div class="container">
+            <p class="eyebrow">MEET YOUR NEXT BUSINESS WORKFLOW</p>
+            <h2 id="products-title">Less chasing.<br>More moving forward.</h2>
+            <p class="studio-intro">Explore how our products connect your customers, conversations and team. Choose a product. Follow the story.</p>
+            <div class="product-switch" role="group" aria-label="Choose product demo">
+              <button type="button" data-product="review" aria-pressed="true">★ ReviewBoost</button>
+              <button type="button" data-product="service" aria-pressed="false">◷ Service Follow-up</button>
+              <button type="button" data-product="agency" aria-pressed="false">▦ AgencyOS</button>
             </div>
+            <div class="studio-grid">
+              <div class="product-copy"><p class="product-kicker" id="product-kicker"></p><h3 id="product-title"></h3><p id="product-description"></p><ul id="product-benefits"></ul><p class="product-audience" id="product-audience"></p><a class="button" href="#contact" id="product-enquiry">Book a tailored demo →</a><p class="studio-note">Configured pilot workflows. Availability and setup confirmed during your demo.</p></div>
+              <div class="workflow-stage" aria-label="Illustrative interactive product preview">
+                <div class="stage-orbit orbit-one"></div><div class="stage-orbit orbit-two"></div>
+                <div class="preview-console"><div class="console-top"><span class="console-dot"></span> MK WORKSPACE <span>DEMO</span></div><div class="console-body"><p id="preview-label"></p><h4 id="preview-title"></h4><div class="preview-customer"><span class="customer-avatar">A</span><div><strong>Alex · Sample customer</strong><small>Illustration · no real messages sent</small></div></div><div class="preview-message" id="preview-message"></div><div class="preview-result" id="preview-result"></div></div></div>
+                <div class="floating-badge">✓ Connected workflow</div>
+              </div>
+            </div>
+            <div class="story-controls"><div class="story-steps" id="story-steps" role="group" aria-label="Workflow steps"></div><button type="button" id="play-story" class="story-play">Play workflow ▶</button></div>
+            <p class="studio-note">Interactive illustration, not a live dashboard. Delivery and customer responses vary. WhatsApp/provider charges may apply. AI calling requires separate setup.</p>
+          </div>
         </section>
-
         <section class="section process" id="process">
             <div class="container process-grid">
                 <div class="process-copy" data-reveal>
@@ -465,7 +418,8 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contact-form" data-reveal novalidate>
+                <form class="contact-form" id="contact-form" name="mk-enquiry" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="website" data-reveal>
+                    <input type="hidden" name="form-name" value="mk-enquiry">
                     <div class="form-grid">
                         <label><span>Name *</span><input type="text" id="name" name="name" autocomplete="name" required></label>
                         <label><span>Email *</span><input type="email" id="email" name="email" autocomplete="email" required></label>
@@ -476,7 +430,7 @@
                     </div>
                     <label><span>Service *</span>
                         <select id="service" name="service" required>
-                            <option value="">Select a service</option>
+                            <option value="">Select a service</option><option value="reviewboost">ReviewBoost demo</option><option value="service-followup">Service Follow-up demo</option><option value="agencyos">AgencyOS demo</option>
                             <option value="ai-agents">AI Agents & Chatbots</option>
                             <option value="workflow-automation">Workflow Automation</option>
                             <option value="crm-lead-management">CRM & Lead Management</option>
@@ -513,7 +467,7 @@
                 <a href="#about">About</a>
                 <a href="#process">Process</a>
                 <a href="#projects">Projects</a>
-                <a href="#ai-tools">AI Tools</a>
+                <a href="#ai-tools">Products</a>
                 <a href="#contact">Contact</a>
             </div>
 
@@ -560,7 +514,8 @@
 
     <script src="js/site-config.js"></script>
     <script src="js/animations.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/product-studio.js"></script>
     <script src="js/site-polish.js"></script>
 </body>
 </html>
