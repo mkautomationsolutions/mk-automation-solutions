@@ -18,5 +18,5 @@ function draw(){const p=products[active],v=p.steps[step];scene.innerHTML=journey
 root.querySelectorAll('[data-product]').forEach(b=>b.onclick=()=>{stop();active=b.dataset.product;step=0;draw();});
 el('play-story').onclick=()=>{if(timer){stop();return;}step=0;draw();el('play-story').textContent='Pause workflow Ⅱ';timer=setInterval(()=>{if(step===3){stop();return;}step++;draw();},3500);};
 el('product-enquiry').onclick=()=>{const p=products[active];el('service').value=p.service;if(!el('message').value.trim())el('message').value=`I would like a tailored ${p.k} demo for my business.`;};
-document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});draw();
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});document.addEventListener('mk:motion',()=>{if(document.documentElement.dataset.motion==='off')stop();});draw();
 })();
